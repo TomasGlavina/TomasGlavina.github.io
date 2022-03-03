@@ -5,7 +5,6 @@ body{
     font-size: 1.2rem;
     font-family: 'Halant', serif;
     font-weight: 400;
-    
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Satisfy', cursive;
@@ -26,8 +25,10 @@ a:hover{
 
 
 header{
+    height: 5vh;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     //background-color: #BEAEE2;
     //padding: 1% 10%;
     //height: 25px;
@@ -71,28 +72,22 @@ nav{
     }
 }
 
-section.introduction{
-    height: 60vh;
-    margin: 5em 1em 3em 1em;
+section.hero{
+    height: 51vh;
     display: flex;
-    justify-content: space-evenly;
-    #ciao{
-        color: #DD7564;
-        font-size: 2.5rem;
-    }
+    margin: 8em 1em 10em 1em;
+    justify-content: center;
+    align-items: center;
     img{
-        width: 10em;
+        width: 41vw;
         border-radius: 999px;
         object-fit: cover;
-        height: 14em;
+        height: 30vh;
         display: block;
-        padding-left: 1em;
-        margin-top: -0.6em;
-
     }
     #intro-info{
         font-size: 1rem;
-        font-weight: 600;
+        font-weight: bold;
         font-family: 'Halant';
     }
     
@@ -106,8 +101,38 @@ section.introduction{
             background-size: 100% 88%;
         }
     }
+
+
 }
 
+.title{
+    color: #DD7564;
+    font-size: 2.5rem;
+}
+
+.action-call{
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins';
+    font-weight: normal;
+    font-style: italic;
+}
+
+.about{
+    .title{
+        display: block;
+    }
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70vh;
+    margin: 8em 1em 10em 1em;
+    img{
+        width: 5em;
+        height: 5em;
+    }
+}
 .close{
     float: right;
     margin: 2em;
@@ -118,19 +143,38 @@ section.introduction{
     transform: translateX(0%);
 }
 
-@media only screen and (min-width: 680px) {
+@media only screen and (min-width: 720px) {
     body{
-        margin: 1.5em 5em;
+        margin: 1.5em 4em;
         background-color:#f8f7f5;
         color: #1B1717;
         font-family: 'Halant', serif;
         font-weight: 400;
+    }
+
+    section.hero{
+        justify-content: space-evenly;
+        #ciao{
+            font-size: 3rem;
+            
+        }
+        img{
+            width: 40vw;
+            height: 40vh;
+        }
     }
 }
 
 
 
 @media only screen and (min-width: 920px) {
+    body{
+        margin: 1.5em 8em;
+        background-color:#f8f7f5;
+        color: #1B1717;
+        font-family: 'Halant', serif;
+        font-weight: 400;
+    }
     .menu{
         display: none;
     }
@@ -142,7 +186,7 @@ section.introduction{
         background: none;
         .navigation{
             margin-top: 1.5em;
-            margin-right: 5em;
+            margin-right: 8em;
             display: flex;
             a{
                 padding: 0;
@@ -161,13 +205,11 @@ section.introduction{
         margin: 0.2em;
     }
 
-    section.introduction{
+    section.hero{
         justify-content: center;
         img{
-            height: 20em;
-            width: 15em;
-            margin-top: -2em;
-
+            height: 50vh;
+            width: 34vw;
         }
         #ciao{
             margin-top: 1em;
@@ -178,6 +220,7 @@ section.introduction{
         #intro-info{
             font-size: 1.2rem;
         }
+        align-items: flex-start;
     }
     
 }

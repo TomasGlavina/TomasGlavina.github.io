@@ -25,12 +25,16 @@ a:hover {
 }
 
 header {
+  height: 5vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header img {
@@ -78,40 +82,36 @@ nav .navigation a:hover {
   color: #eaf7f5;
 }
 
-section.introduction {
-  height: 60vh;
-  margin: 5em 1em 3em 1em;
+section.hero {
+  height: 51vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  margin: 8em 1em 10em 1em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-section.introduction #ciao {
-  color: #DD7564;
-  font-size: 2.5rem;
-}
-
-section.introduction img {
-  width: 10em;
+section.hero img {
+  width: 41vw;
   border-radius: 999px;
   -o-object-fit: cover;
      object-fit: cover;
-  height: 14em;
+  height: 30vh;
   display: block;
-  padding-left: 1em;
-  margin-top: -0.6em;
 }
 
-section.introduction #intro-info {
+section.hero #intro-info {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: bold;
   font-family: 'Halant';
 }
 
-section.introduction .tomas {
+section.hero .tomas {
   background-image: -webkit-gradient(linear, left top, left bottom, to(#B2DEDD));
   background-image: linear-gradient(#B2DEDD 100%);
   background-repeat: no-repeat;
@@ -121,8 +121,52 @@ section.introduction .tomas {
   transition: background-size 0.25s ease-in;
 }
 
-section.introduction .tomas:hover {
+section.hero .tomas:hover {
   background-size: 100% 88%;
+}
+
+.title {
+  color: #DD7564;
+  font-size: 2.5rem;
+}
+
+.action-call {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'Poppins';
+  font-weight: normal;
+  font-style: italic;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70vh;
+  margin: 8em 1em 10em 1em;
+}
+
+.about .title {
+  display: block;
+}
+
+.about img {
+  width: 5em;
+  height: 5em;
 }
 
 .close {
@@ -136,17 +180,36 @@ section.introduction .tomas:hover {
           transform: translateX(0%);
 }
 
-@media only screen and (min-width: 680px) {
+@media only screen and (min-width: 720px) {
   body {
-    margin: 1.5em 5em;
+    margin: 1.5em 4em;
     background-color: #f8f7f5;
     color: #1B1717;
     font-family: 'Halant', serif;
     font-weight: 400;
   }
+  section.hero {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  section.hero #ciao {
+    font-size: 3rem;
+  }
+  section.hero img {
+    width: 40vw;
+    height: 40vh;
+  }
 }
 
 @media only screen and (min-width: 920px) {
+  body {
+    margin: 1.5em 8em;
+    background-color: #f8f7f5;
+    color: #1B1717;
+    font-family: 'Halant', serif;
+    font-weight: 400;
+  }
   .menu {
     display: none;
   }
@@ -160,7 +223,7 @@ section.introduction .tomas:hover {
   }
   nav .navigation {
     margin-top: 1.5em;
-    margin-right: 5em;
+    margin-right: 8em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -179,23 +242,25 @@ section.introduction .tomas:hover {
   .logo {
     margin: 0.2em;
   }
-  section.introduction {
+  section.hero {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
-  section.introduction img {
-    height: 20em;
-    width: 15em;
-    margin-top: -2em;
+  section.hero img {
+    height: 50vh;
+    width: 34vw;
   }
-  section.introduction #ciao {
+  section.hero #ciao {
     margin-top: 1em;
     font-size: 4rem;
     margin-right: 1em;
     margin-bottom: 0;
   }
-  section.introduction #intro-info {
+  section.hero #intro-info {
     font-size: 1.2rem;
   }
 }
