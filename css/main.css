@@ -1,30 +1,37 @@
 body {
-  margin: 1.5em;
-  background-color: #f8f7f5;
-  color: #1E292B;
+  margin: 0;
+  background-color: #44475a;
+  color: #f8f8f2;
   font-size: 1.2rem;
-  font-family: 'Halant', serif;
+  font-family: "Halant", serif;
   font-weight: 400;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Satisfy', cursive;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Satisfy", cursive;
   font-weight: 400;
-  color: #1E292B;
+  color: #f8f8f2;
 }
 
 a {
-  color: #1E292B;
+  color: #ff79c6;
   text-decoration: none;
   font-size: 1.3rem;
 }
 
 a:hover {
   text-decoration: underline;
-  color: #DD7564;
+  color: #d666a6;
 }
 
 header {
+  padding: 1em;
+  background-color: #282a36;
   height: 5vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -40,13 +47,18 @@ header {
 header img {
   width: 2.5em;
   height: 2.5em;
-  margin-top: -.3em;
+  margin-top: -0.3em;
   cursor: pointer;
 }
 
 header .logo {
-  font-family: 'Playfair Display';
-  font-size: 1.5em;
+  font-family: "Playfair Display";
+  font-size: 1.4em;
+  color: #f8f7f5;
+}
+
+header .logo:hover {
+  color: #ff79c6;
 }
 
 nav {
@@ -54,15 +66,15 @@ nav {
   right: 0;
   top: 0;
   height: 100vh;
-  background: whitesmoke;
-  width: 50%;
+  background-color: #232530;
+  width: 45%;
   z-index: 99;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
-  -webkit-transition: -webkit-transform .5s ease-in-out;
-  transition: -webkit-transform .5s ease-in-out;
-  transition: transform .5s ease-in-out;
-  transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 
 nav .navigation {
@@ -72,31 +84,57 @@ nav .navigation {
 }
 
 nav .navigation a {
-  padding: .75em 2em;
+  color: #eaf7f5;
+  padding: 0.75em 2em;
   display: block;
   width: 100%;
 }
 
 nav .navigation a:hover {
-  background-color: #e29090;
-  color: #eaf7f5;
+  background-color: #44475a;
+  color: #ff79c6;
 }
 
-section.hero {
-  height: 51vh;
+.container {
+  background-color: #383a59;
+}
+
+.hero {
+  height: 49vh;
+  padding: 8em 1em 10em 1em;
+  text-align: center;
+}
+
+.hero .tomas {
+  background-image: -webkit-gradient(linear, left top, left bottom, to(#44475a));
+  background-image: linear-gradient(#44475a 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.13em;
+  background-position: 0 80%;
+  -webkit-transition: background-size 0.25s ease-in;
+  transition: background-size 0.25s ease-in;
+}
+
+.hero .tomas:hover {
+  background-size: 100% 89%;
+  color: #6272a4;
+}
+
+.hero .hero-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 8em 1em 10em 1em;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-section.hero img {
+.hero .hero-content #hero-img {
+  margin: auto;
   width: 41vw;
   border-radius: 999px;
   -o-object-fit: cover;
@@ -105,39 +143,25 @@ section.hero img {
   display: block;
 }
 
-section.hero #intro-info {
+.hero .hero-content #hero-info {
+  margin: auto;
+  padding-right: 1em;
   font-size: 1rem;
   font-weight: bold;
-  font-family: 'Halant';
-}
-
-section.hero .tomas {
-  background-image: -webkit-gradient(linear, left top, left bottom, to(#B2DEDD));
-  background-image: linear-gradient(#B2DEDD 100%);
-  background-repeat: no-repeat;
-  background-size: 100% 0.2em;
-  background-position: 0 80%;
-  -webkit-transition: background-size 0.25s ease-in;
-  transition: background-size 0.25s ease-in;
-}
-
-section.hero .tomas:hover {
-  background-size: 100% 88%;
+  font-family: "Halant";
 }
 
 .title {
-  color: #DD7564;
+  display: block;
+  margin: auto;
+  color: #ff79c6;
   font-size: 2.5rem;
 }
 
 .action-call {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-family: 'Poppins';
+  display: block;
+  text-align: center;
+  font-family: "Poppins";
   font-weight: normal;
   font-style: italic;
 }
@@ -184,30 +208,39 @@ section.hero .tomas:hover {
   body {
     margin: 1.5em 4em;
     background-color: #f8f7f5;
-    color: #1B1717;
-    font-family: 'Halant', serif;
+    color: #1b1717;
+    font-family: "Halant", serif;
     font-weight: 400;
   }
-  section.hero {
+  .hero {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
-  section.hero #ciao {
+  .hero .title {
     font-size: 3rem;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
-  section.hero img {
-    width: 40vw;
+  .hero #hero-img {
+    width: 30vw;
     height: 40vh;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
 }
 
 @media only screen and (min-width: 920px) {
   body {
-    margin: 1.5em 8em;
     background-color: #f8f7f5;
-    color: #1B1717;
-    font-family: 'Halant', serif;
+    color: #1b1717;
+    font-family: "Halant", serif;
     font-weight: 400;
   }
   .menu {
@@ -216,52 +249,55 @@ section.hero .tomas:hover {
   nav {
     -webkit-transform: translateX(0);
             transform: translateX(0);
-    display: block;
+    position: unset;
     width: auto;
     height: 5em;
     background: none;
   }
   nav .navigation {
-    margin-top: 1.5em;
-    margin-right: 8em;
+    display: block;
+    margin: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
   nav .navigation a {
-    padding: 0;
-    margin: .5em;
+    padding: 1em;
   }
   nav .navigation a:hover {
     background: none;
-    color: #DD7564;
+    color: #dd7564;
   }
   nav svg.close {
     display: none;
   }
-  .logo {
-    margin: 0.2em;
-  }
-  section.hero {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  .hero {
+    border: 5px solid pink;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  section.hero img {
-    height: 50vh;
-    width: 34vw;
+  .hero .hero-content #hero-img {
+    height: 51vh;
+    width: 25vw;
   }
-  section.hero #ciao {
-    margin-top: 1em;
-    font-size: 4rem;
-    margin-right: 1em;
-    margin-bottom: 0;
+  .hero .hero-content #hero-info {
+    font-size: 1.4rem;
   }
-  section.hero #intro-info {
-    font-size: 1.2rem;
+  .hero .title {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 100%;
+            flex: 1 100%;
+    font-size: 6rem;
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+  }
+  .action-call {
+    text-align: center;
   }
 }
 /*# sourceMappingURL=main.css.map */
