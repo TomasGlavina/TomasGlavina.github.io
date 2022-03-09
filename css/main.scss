@@ -1,18 +1,15 @@
 body {
+  height: 100%;
+  width: 100%;
   margin: 0;
   background-color: #44475a;
   color: #f8f8f2;
   font-size: 1.2rem;
-  font-family: "Halant", serif;
+  font-family: "Poppins", serif;
   font-weight: 400;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Satisfy", cursive;
+h1 {
+  font-family: "Satisfy", sans-serif;
   font-weight: 400;
   color: #f8f8f2;
 }
@@ -31,7 +28,7 @@ a:hover {
 header {
   padding: 1em;
   background-color: #282a36;
-  height: 5vh;
+  height: 4fr;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,7 +46,7 @@ header {
     font-family: "Playfair Display";
     font-size: 1.4em;
     color: #f8f7f5;
-    &:hover{
+    &:hover {
       color: #ff79c6;
     }
   }
@@ -81,12 +78,13 @@ nav {
     }
   }
 }
-.container{
+.container {
   background-color: #383a59;
+  
 }
 
 .hero {
-  height: 49vh;
+  height: 56.7vh;
   padding: 8em 1em 10em 1em;
   text-align: center;
   .tomas {
@@ -100,6 +98,12 @@ nav {
       color: #6272a4;
     }
   }
+  #hero-info {
+    margin: auto;
+    padding-right: 1em;
+    font-size: 1rem;
+    font-weight: bold;
+  }
   .hero-content {
     display: flex;
     flex-flow: column wrap;
@@ -111,13 +115,7 @@ nav {
       object-fit: cover;
       height: 30vh;
       display: block;
-    }
-    #hero-info {
-      margin: auto;
-      padding-right: 1em;
-      font-size: 1rem;
-      font-weight: bold;
-      font-family: "Halant";
+      padding: 1em;
     }
   }
 }
@@ -127,7 +125,7 @@ nav {
 
   margin: auto;
   color: #ff79c6;
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 .action-call {
@@ -163,55 +161,55 @@ nav {
   transform: translateX(0%);
 }
 
-@media only screen and (min-width: 720px) {
-  body {
-    margin: 1.5em 4em;
-    background-color: #f8f7f5;
-    color: #1b1717;
-    font-family: "Halant", serif;
-    font-weight: 400;
-  }
-
+@media only screen and (min-width: 720px) { 
   .hero {
-      flex-flow: row;
-    justify-content: space-evenly;
-    .title {
-      font-size: 3rem;
-      order: 1;
+    .title{
+      font-size: 4rem;
     }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     #hero-img {
       width: 30vw;
       height: 40vh;
-        order: 2;
+      padding: 3em;
     }
-    .hero-info{
-    
-    }
+  }
+  header {
+    padding: 1em 4em;
   }
 }
 
-@media only screen and (min-width: 920px) {
-  body {
-    background-color: #f8f7f5;
-    color: #1b1717;
-    font-family: "Halant", serif;
-    font-weight: 400;
-  }
+@media only screen and (min-width: 960px) {
   .menu {
     display: none;
   }
+
+  header {
+    height: 3em;
+    padding: 0 5em;
+    justify-content: space-between;
+    align-items: center;
+    
+
+  }
+  .logo{
+    margin-left: -3em;
+  }
   nav {
+    display: block;
     transform: translateX(0);
     position: unset;
-    width: auto;
-    height: 5em;
+    height: 2em;
     background: none;
     .navigation {
-      display: block;
-      margin: auto;
       display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin: -1.5em;
       a {
-        padding: 1em;
+        padding: 1.5em 1em;
         &:hover {
           background: none;
           color: #dd7564;
@@ -224,27 +222,27 @@ nav {
   }
 
   .hero {
-      border: 5px solid pink;
-      flex-flow: row wrap;
-      align-items: flex-start;
-      .hero-content{
-        #hero-img {
+    flex-direction: row;
+    .hero-content {
+      #hero-img {
         height: 51vh;
         width: 25vw;
-
-    }
-        #hero-info {
-            font-size: 1.4rem;
-        }
+      }
+      #hero-info {
+        display: block;
+        font-size: 1.4rem;
+      }
     }
     .title {
-        flex: 1 100%;
-      font-size: 6rem;
-      flex-grow: 1;
+      font-size: 5rem;
     }
-    
   }
-  .action-call {
-    text-align: center;
+}
+@media only screen and (min-width: 1200px) {
+  header {
+    height: 3em;
+  }
+  .logo{
+    margin-left: 0;
   }
 }

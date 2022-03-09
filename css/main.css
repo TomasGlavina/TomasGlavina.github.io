@@ -1,19 +1,16 @@
 body {
+  height: 100%;
+  width: 100%;
   margin: 0;
   background-color: #44475a;
   color: #f8f8f2;
   font-size: 1.2rem;
-  font-family: "Halant", serif;
+  font-family: "Poppins", serif;
   font-weight: 400;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Satisfy", cursive;
+h1 {
+  font-family: "Satisfy", sans-serif;
   font-weight: 400;
   color: #f8f8f2;
 }
@@ -32,7 +29,7 @@ a:hover {
 header {
   padding: 1em;
   background-color: #282a36;
-  height: 5vh;
+  height: 4fr;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -100,7 +97,7 @@ nav .navigation a:hover {
 }
 
 .hero {
-  height: 49vh;
+  height: 56.7vh;
   padding: 8em 1em 10em 1em;
   text-align: center;
 }
@@ -118,6 +115,13 @@ nav .navigation a:hover {
 .hero .tomas:hover {
   background-size: 100% 89%;
   color: #6272a4;
+}
+
+.hero #hero-info {
+  margin: auto;
+  padding-right: 1em;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .hero .hero-content {
@@ -141,21 +145,14 @@ nav .navigation a:hover {
      object-fit: cover;
   height: 30vh;
   display: block;
-}
-
-.hero .hero-content #hero-info {
-  margin: auto;
-  padding-right: 1em;
-  font-size: 1rem;
-  font-weight: bold;
-  font-family: "Halant";
+  padding: 1em;
 }
 
 .title {
   display: block;
   margin: auto;
   color: #ff79c6;
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 .action-call {
@@ -205,64 +202,73 @@ nav .navigation a:hover {
 }
 
 @media only screen and (min-width: 720px) {
-  body {
-    margin: 1.5em 4em;
-    background-color: #f8f7f5;
-    color: #1b1717;
-    font-family: "Halant", serif;
-    font-weight: 400;
-  }
   .hero {
-    -webkit-box-orient: horizontal;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row;
-            flex-flow: row;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .hero .title {
-    font-size: 3rem;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    font-size: 4rem;
   }
   .hero #hero-img {
     width: 30vw;
     height: 40vh;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    padding: 3em;
+  }
+  header {
+    padding: 1em 4em;
   }
 }
 
-@media only screen and (min-width: 920px) {
-  body {
-    background-color: #f8f7f5;
-    color: #1b1717;
-    font-family: "Halant", serif;
-    font-weight: 400;
-  }
+@media only screen and (min-width: 960px) {
   .menu {
     display: none;
   }
+  header {
+    height: 3em;
+    padding: 0 5em;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .logo {
+    margin-left: -3em;
+  }
   nav {
+    display: block;
     -webkit-transform: translateX(0);
             transform: translateX(0);
     position: unset;
-    width: auto;
-    height: 5em;
+    height: 2em;
     background: none;
   }
   nav .navigation {
-    display: block;
-    margin: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: -1.5em;
   }
   nav .navigation a {
-    padding: 1em;
+    padding: 1.5em 1em;
   }
   nav .navigation a:hover {
     background: none;
@@ -272,32 +278,30 @@ nav .navigation a:hover {
     display: none;
   }
   .hero {
-    border: 5px solid pink;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .hero .hero-content #hero-img {
     height: 51vh;
     width: 25vw;
   }
   .hero .hero-content #hero-info {
+    display: block;
     font-size: 1.4rem;
   }
   .hero .title {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 100%;
-            flex: 1 100%;
-    font-size: 6rem;
-    -ms-flex-positive: 1;
-        flex-grow: 1;
+    font-size: 5rem;
   }
-  .action-call {
-    text-align: center;
+}
+
+@media only screen and (min-width: 1200px) {
+  header {
+    height: 3em;
+  }
+  .logo {
+    margin-left: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */
