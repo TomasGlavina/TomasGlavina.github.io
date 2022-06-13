@@ -97,7 +97,7 @@ nav .navigation a:hover {
 }
 
 .hero {
-  height: 57vh;
+  height: 95vh;
   padding: 8em 1em 10em 1em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -107,6 +107,9 @@ nav .navigation a:hover {
       -ms-flex-flow: column;
           flex-flow: column;
   text-align: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .hero .tomas {
@@ -130,8 +133,8 @@ nav .navigation a:hover {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: row wrap;
+          flex-direction: row wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -206,30 +209,22 @@ nav .navigation a:hover {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
+  height: 100vh;
 }
 
 .about {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding: 3em 0em;
+  display: block;
+  text-align: center;
   height: 100vh;
 }
 
 .about #tech-pic {
-  width: 20em;
+  width: 10em;
 }
 
 .about #about-text {
+  font-size: 0.85rem;
   padding: 5em;
   text-align: justify;
 }
@@ -247,6 +242,29 @@ nav .navigation a:hover {
 .open-nav {
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
+}
+
+#projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+#projects #slider {
+  height: 60vh;
+  width: 90%;
+  padding: 1em;
 }
 
 @media only screen and (min-width: 720px) {
