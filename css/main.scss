@@ -1,3 +1,21 @@
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 body {
   height: 100%;
   width: 100%;
@@ -26,6 +44,7 @@ a:hover {
 }
 
 header {
+  animation: 1s ease-out 0s 1 slideInFromLeft;
   padding: 1em;
   background-color: #282a36;
   height: 4fr;
@@ -84,21 +103,21 @@ nav {
 }
 
 .hero {
-  height: 95vh;
+  animation: 1s ease-in 0s 1 slideInFromRight;
+  height: 90vh;
   padding: 8em 1em 10em 1em;
   display: flex;
   flex-flow: column;
   text-align: center;
   justify-content: space-evenly;
   .tomas {
-    background-image: linear-gradient(#44475a 100%);
+    background-image: linear-gradient(#47b6a7 100%);
     background-repeat: no-repeat;
-    background-size: 100% 0.13em;
-    background-position: 0 80%;
-    transition: background-size 0.25s ease-in;
+    background-size: 0;
+    transition: background-size 0.5s ease-in; 
     &:hover {
       background-size: 100%;
-      color: #fff;
+      color: rgb(241, 210, 250);
     }
   }
   .hero-container{
@@ -137,7 +156,7 @@ nav {
 
 
 .callToAction{
-  padding: 10em;
+  padding: 10em 0 0 0;
   display: block;
   flex: 1;
   text-align: center;
@@ -158,7 +177,7 @@ nav {
 .hero-container{
   display: flex;
   flex-flow: row wrap;
-  height: 100vh;
+  height: 90vh;
 }
 
 .about {
@@ -285,10 +304,23 @@ nav {
   .logo{
     margin-left: 0;
   }
-  .container{
-    height: 95vh;
-  }
   .hero{
     display: block;
+    height: 60vh;
+    .hero-container{
+      height: 50vh;
+    }
+    .callToAction{
+      height: 10em;
+    }
+  }
+  #about-me{
+    #about-text {
+      font-size: 1.3rem;
+    }
+    #tech-pic{
+      height: 15em;
+      width: 20em;
+    }
   }
 }
