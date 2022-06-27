@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,8 +10,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,606&display=swap"
     rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,606&family=Poppins:ital,wght@0,400;1,100;1,200&display=swap"
     rel="stylesheet">
@@ -88,7 +87,7 @@
         <ul class="navigation">
           <li><a href="#home"> HOME</a></li>
           <li><a href="#about-me">ABOUT</a></li>
-          <li><a href="#resume">RESUME</a></li>
+          <li><a href="#projects">PROJECTS</a></li>
           <li><a href="#contact">CONTACT ME</a></li>
         </ul>
       </nav>
@@ -99,8 +98,9 @@
         <div class="hero">
           <div class="hero-container">
             <div class="hero-title">
-              <h1 class="title">Ciao, I am <span class="tomas">Tomas<span>.</h1>
-              <h3 id="hero-info">I'm an Argentinean Software Engineering student at TAMK in Tampere, Finland.</h3>
+              <h3 id="ciao">Ciao, I am </h3>
+              <h1 class="title"><span class="tomas">Tomas Glavina<span>.</h1>
+              <p id="hero-info">I'm an Argentinean Software Engineering student at TAMK in Tampere, Finland.</p>
             </div>
             <div class="hero-content">
               <img id="hero-img" src="/images/me-inca.jpeg" />
@@ -113,24 +113,51 @@
         <div>
           <h1 class="title">About me</h1>
         </div>
-        <p id="about-text">
-          Hi! I am Tomas Glavina. I'm 26 years old and I'm from Buenos Aires, Argentina. I am a passionate person about technology and in 2020 I found programming and I was never able to stop.
-          <br>Currently, I am studying Software Engineering in Tampere University of Applied Sciences where I will be a tutor for the new students next year, which I'm very excited about! 
-           I finished my first year with a good 4,69/ 5 overall grade and also completed a 3rd year course of Operative Systems and Linux Programming, since I love Linux and I wanted to learn 
-          more about it and programming C in the command line. 
-          <br> Besides school, I am also learning web development in Django and Bash scripting by my own. I hope to finish the summer of 2022 with at least a project of each topic to show. 
-          My hobbies are going on hikes with my wife and dog, reading (The Hobbit, best book ever), playing football (Let's go Ilves!), learning more about coding and spending time with my friends. 
+        <div id="text-and-fedora">
+        <p class="text">
+          Hi! I am Tomas Glavina. I'm 26 years old (90s kid!) and I'm from Buenos Aires, Argentina. I am a passionate
+          person about technology and in 2020 I found programming and I was never able to stop. My main languages are Java, 
+          C/C++ and JavaScript.
+          <br>Currently, I am studying Software Engineering in Tampere University of Applied Sciences where I will be a
+          tutor for the new students next year, which I'm very excited about!
+          I finished my first year with a good 4,69/5 overall grade and also completed a 3rd year course of Operative
+          Systems and Linux Programming, since I love Linux and I wanted to learn
+          more about it and programming C in the command line.
+          <br> Besides school, I am also learning web development in Django and Bash scripting by my own. I hope to
+          finish the summer of 2022 with at least a project of each topic to show.
+          My hobbies are going on hikes with my wife and dog, reading (The Hobbit, best book ever), playing football
+          (Let's go Ilves!), learning more about coding and spending time with my friends.
         </p>
-        <img id="tech-pic" src="/images/tech.png" alt="laptop with code icon">
+        <img id="fedora" src="/images/fedora.png" alt="fedora linux logo">
+      </div>
+        <img id="gameboys" src="/images/poke.jpg" alt="gameboys with their pokemon games">
       </section>
     </section>
     <section id="projects">
-      <h1 class="title">My projects</h1>
-      <video id="slider" autoplay muted loop src="videos/hotel-sample.webm"></video>
+      <h1 class="title" id="projects-title">My projects</h1>
+      <h2>Hotel App</h2>
+      <p class="text"> The program works as a Hotel
+        program where the user gets the option to reserve a room, as well as checking before hand if the specific
+        room is available and checking out. For checking out, the user knows the booking number
+        reservation, which is printed in the invoice (it is assumed in this project that the user pays automatically the
+        invoice when checking out) and lastly, the user can print the invoice before the check out, if he/she wishes
+        so.
+        In a nutshell, the code works as follows: it first do the preparations, creating a seed for the random rooms,
+        then creating the vectors and giving these vectors the same amount of elements as the random number,
+        setting up the prices, room types etc. The customer elements at this point are empty and will only get values
+        when an actual customer reserves a room.
+        After the preparations, the main function calls the start function, taking the hotel and customer vectors as
+        parameters. The start function prints some welcome message and then starts the big loop that keeps the
+        program running. It is an infinite loop that it only stops either if the amount of free rooms is 0 (gets full)
+        or if
+        the user presses 0.
+      </p>
+      <video id="hotel-video" controls="controls">
+        <source src="videos/hotel-sample.webm" type="video/mp4">
+      </video>
     </section>
     <p id="thanks">Thank you for taking the time to visit my page and read this! <br>Have a beautiful day!</p>
   </div>
   <script src="index.js"></script>
 </body>
-
 </html>

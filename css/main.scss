@@ -20,15 +20,15 @@ body {
   height: 100%;
   width: 100%;
   margin: 0;
-  background-color: #44475a;
+  background-color: #001233;
   color: #f8f8f2;
   font-size: 1.2rem;
-  font-family: "Poppins", serif;
-  font-weight: 400;
+  font-family: 'Fira Code', monospace;
 }
 h1 {
-  font-family: "Satisfy", sans-serif;
-  font-weight: 400;
+  
+  font-family: "VT323", monospace;
+  text-decoration: underline;
   color: #f8f8f2;
 }
 
@@ -40,13 +40,14 @@ a {
 
 a:hover {
   text-decoration: underline;
-  color: #d666a6;
+  color: #f878c0;
 }
 
 header {
   animation: 1s ease-out 0s 1 slideInFromLeft;
   padding: 1em;
-  background-color: #282a36;
+  
+  background-color: #000818;
   height: 4fr;
   display: flex;
   justify-content: space-between;
@@ -62,9 +63,9 @@ header {
   }
 
   .logo {
-    font-family: "Playfair Display";
-    font-size: 1.4em;
-    color: #f8f7f5;
+    font-family: "VT323", monospace;
+    font-size: 2rem;
+    color: #ec237a;
     &:hover {
       color: #ff79c6;
     }
@@ -75,7 +76,7 @@ nav {
   right: 0;
   top: 0;
   height: 100vh;
-  background-color: #232530;
+  background-color: #000b1f;
   width: 45%;
   z-index: 99;
   transform: translateX(100%);
@@ -90,16 +91,8 @@ nav {
       padding: 0.75em 2em;
       display: block;
       width: 100%;
-      &:hover {
-        background-color: #44475a;
-        color: #ff79c6;
-      }
     }
   }
-}
-.container {
-  background-color: #383a59;
-  
 }
 
 .hero {
@@ -110,14 +103,22 @@ nav {
   flex-flow: column;
   text-align: center;
   justify-content: space-evenly;
+  #ciao {
+    font-family: 'VT323', monospace;
+    text-align: left;
+    margin: auto;
+    padding-right: 1em ;
+    font-size: 2rem;
+    font-weight: bold;
+  }
   .tomas {
-    background-image: linear-gradient(#47b6a7 100%);
+    font-family: 'Satisfy', sans-serif;
+    background-image: linear-gradient(#dceaee 100%);
     background-repeat: no-repeat;
     background-size: 0;
     transition: background-size 0.5s ease-in; 
     &:hover {
       background-size: 100%;
-      color: rgb(241, 210, 250);
     }
   }
   .hero-container{
@@ -130,7 +131,6 @@ nav {
     margin: auto;
     padding-right: 1em;
     font-size: 1rem;
-    font-weight: bold;
   }
   .hero-content {
     display: flex;
@@ -150,7 +150,7 @@ nav {
 .title {
   display: block;
   margin: auto;
-  color: #ff79c6;
+  color: #ec237a;
   font-size: 3rem;
 }
 
@@ -173,6 +173,10 @@ nav {
     }
   }
 }  
+#gameboys{
+  height: 20em;
+  width: 35em;
+}
 
 .hero-container{
   display: flex;
@@ -188,14 +192,23 @@ nav {
   #tech-pic{
     width: 10em;
   }
-  #about-text {
-    font-size: 0.85rem;
-    padding: 5em;
-    text-align: justify;
+  #text-and-fedora{
+    display: flex;
+    flex-direction: row;
   }
-  #thanks{
-    text-align: center;
+  #fedora{
+    height: 100px;
+    width: 100px;
   }
+  
+}
+#thanks{
+  text-align: center;
+}
+.text {
+  font-size: 0.85rem;
+  padding: 5em;
+  text-align: justify;
 }
 .close {
   float: right;
@@ -208,15 +221,22 @@ nav {
 }
 
 #projects{
+  text-align: center;
+  padding: 5em 15em;
   display: flex;
   flex-flow: column wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 100vh;
-  #slider{
-    height: 60vh;
-    width: 90%;
+  #projects-title{
     padding: 1em;
+    margin: 0;
+  }
+  h2{
+    padding: 0;
+  }
+  #hotel-video{
+    height: 600px;
+    width: 600px;
   }
 }
 
@@ -271,7 +291,7 @@ nav {
         padding: 1.5em 1em;
         &:hover {
           background: none;
-          color: #dd7564;
+          color: #ec237a;
         }
       }
     }
@@ -295,6 +315,8 @@ nav {
     .title {
       font-size: 5rem;
     }
+
+    
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -315,12 +337,10 @@ nav {
     }
   }
   #about-me{
+    padding: 5em 15em 0 15em;
     #about-text {
-      font-size: 1.3rem;
-    }
-    #tech-pic{
-      height: 15em;
-      width: 20em;
-    }
+      padding: 5em 10em 5em 10em;
+      font-size: 1rem;
+    }   
   }
 }
