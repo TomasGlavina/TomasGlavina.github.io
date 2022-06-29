@@ -135,26 +135,49 @@
     </section>
     <section id="projects">
       <h1 class="title" id="projects-title">My projects</h1>
+      <div id="hotel">
       <h2>Hotel App</h2>
-      <p class="text"> The program works as a Hotel
+      <video class="hotel-video" controls>
+        <source src="videos/hotel-sample.webm" type="video/mp4">
+      </video>
+      <ul class="text">
+        <li><a href="https://github.com/TomasGlavina/HotelApp">Github Repository</a></li>
+        <li>Written in C++, for our first programming languages course. Tried best clean code methods, with a nice commented code.</li>
+        <li> The program works as a Hotel
         program where the user gets the option to reserve a room, as well as checking before hand if the specific
         room is available and checking out. For checking out, the user knows the booking number
         reservation, which is printed in the invoice (it is assumed in this project that the user pays automatically the
         invoice when checking out) and lastly, the user can print the invoice before the check out, if he/she wishes
-        so.
+        so.</li><li>
         In a nutshell, the code works as follows: it first do the preparations, creating a seed for the random rooms,
         then creating the vectors and giving these vectors the same amount of elements as the random number,
         setting up the prices, room types etc. The customer elements at this point are empty and will only get values
-        when an actual customer reserves a room.
+        when an actual customer reserves a room. </li>
+        <li>
         After the preparations, the main function calls the start function, taking the hotel and customer vectors as
         parameters. The start function prints some welcome message and then starts the big loop that keeps the
         program running. It is an infinite loop that it only stops either if the amount of free rooms is 0 (gets full)
-        or if
-        the user presses 0.
-      </p>
-      <video id="hotel-video" controls="controls">
-        <source src="videos/hotel-sample.webm" type="video/mp4">
-      </video>
+        or if the user presses 0.</li>
+        <li>In this project, what I focused the most was in the user input and its validation. I contemplated most of the wrong inputs that a user can do:</li>
+        </ul>
+        <video id="error-handler-hotel" class="hotel-video" controls>
+          <source src="/videos/error-sample.webm" type="video/mp4">
+        </video>
+      </div>
+      <div id="weather">
+        <h2>Weather App</h2>
+        <video class="web-page-video" controls>
+          <source src="videos/2022-06-29 13-00-03.mp4" type="video/mp4">
+        </video>
+        <ul class="text">
+          <li><a href="https://github.com/TomasGlavina/WeatherPage">Github Repository</a></li>
+          <li>This web app was the final assignment for our Web Development course at TAMK</li>
+          <li>It is design to show weather data gathered by the school's weather station and provided by an API also from TAMK.</li>
+          <li>Languages used: HTML, CSS, JavaScript</li>
+          <li>I wanted to do a single HTML page that it updates its contents according to the data requested by the user.</li>
+          <li>UI is simple and easy to use, trying to be as clean as possible regardless of the requirements from the teacher.</li>
+        </ul>
+      </div>
     </section>
     <p id="thanks">Thank you for taking the time to visit my page and read this! <br>Have a beautiful day!</p>
   </div>
