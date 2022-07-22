@@ -1,243 +1,90 @@
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
+$primary: #74dfe0; 
+$secondary: #d8d674;
+$dark: #1f1e1e;
+$font-family-monospace: 'Inconsolata', monospace;
 
-@keyframes slideInFromRight {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
 
-//General styling
 
-body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  background-color: #2e3440;
-  color: #ECEFF4;
-  font-size: 1.2rem;
-  font-family: 'Fira Code', monospace;
-}
 h1{
-  font-family: "VT323", monospace;
-  text-decoration: underline;
-  color: #88C0D0;
+  font-family: 'Inconsolata', monospace;
 }
 
-h2{
-  font-family: 'VT323', monospace;
-  color: #88C0D0;
-  font-size: 2rem;
-}
-
-a {
-  color: #BF616A;
-  text-decoration: none;
-  font-size: 1.3rem;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: #B48EAD;
-}
-
-.title {
-  display: block;
-  margin: auto;
-  color: #BF616A;
-  font-size: 3rem;
-}
-
-.text {
-  font-size: 0.95rem;
-  padding: 5em;
-  text-align: justify;
-  word-spacing: 0.1rem;
-}
-
-//PAGE STYLING
-
-header {
-  animation: 1s ease-out 0s 1 slideInFromLeft;
-  position: fixed;
-  width: 100vw;
-  padding: 1em 5em;
-  height: 3em;
-  background-color: #20242c;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  img {
-    width: 2.5em;
-    height: 2.5em;
-    margin-top: -0.3em;
-    cursor: pointer;
-  }
-  .menu{
-    display: none;
-  }
-  .logo {
-    font-family: "VT323", monospace;
-    font-size: 2.5rem;
-    color: #d6737d;
-    &:hover {
-      color: #B48EAD;
-    }
-  }
-  nav {
-    display: block;
-    transform: translateX(0);
-    position: unset;
-    height: 2em;
-    background: none;
-    .navigation {
-      display: flex;
-     justify-content: space-evenly;
-     list-style-type: none;
-     margin: -0.5em 4em;
-      align-items: center;
-      padding: 0 5em;
-      a {
-        color: #eaf7f5;
-        padding: 0.75em 2em;
-        display: block;
-        width: 100%;
-        &:hover {
-          background: none;
-          color: #ec237a;
-        }
-      }
-    }
-    svg.close {
-      display: none;
-    }
-  }
-}
-
-//HERO STYLING
-
-.hero {
-  animation: 1s ease-in 0s 1 slideInFromRight;
-  height: 70vh;
-  padding: 8em 1em 10em 1em;
-  display: flex;
-  flex-flow: column;
-  text-align: center;
-  justify-content: space-evenly;
-  #ciao {
-    font-family: 'VT323', monospace;
-    text-align: left;
-    margin: auto;
-    padding-right: 1em ;
-    font-size: 2rem;
-    font-weight: bold;
-  }
-  .tomas {
-    font-family: 'Satisfy', sans-serif;
-    background-image: linear-gradient(#88C0D0 100%);
-    background-repeat: no-repeat;
-    background-size: 0;
-    transition: background-size 0.5s ease-in; 
-    &:hover {
-      background-size: 100%;
-    }
-  }
-  .hero-container{
-    display: flex;
-    flex-direction: row wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 65vh;
-  }
-  #hero-info {
-    margin: auto;
-    padding-right: 1em;
-    font-size: 1rem;
-  }
-  .hero-content {
-    display: flex;
-    align-items: center;
-    #hero-img {
-      margin: auto;
-      height: 51vh;
-      width: 25vw;
-      border-radius: 999px;
-      object-fit: cover;
-      display: block;
-      padding: 0;
-    }
-  }
-  .callToAction{
-    padding: 10em 0 0 0;
-    text-align: center;
-  }
-
-}
-
-//ABOUT SECTION STYLING
-
-.about {
-  padding: 1em 5em;
-  background: #2c303b;
-  display: block;
-  text-align: center;
+#home {
   height: 100vh;
-  #text-and-fedora{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+}
+
+#hero-img{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%; 
+  object-fit: cover;
+}
+
+#about-text{
+  padding-top: 10%;
+}
+
+#about-me-img{
+  height: 300px;
+  width: 200px;
+  border-radius: 10%;
+  box-shadow: 3px 5px 10px #1d1d1a;
+}
+
+#fedora{
+  height: 40px;
+  width: 40px;
+  float: right;
+}
+
+video{
+  width: 410px;
+}
+
+#gameboys{
+  width: 50px;
+  height: 20px;
+}
+
+header{
+  img{
+    -webkit-filter: invert(.9); /* safari 6.0 - 9.0 */
+    filter: invert(.9);
   }
-  #fedora{
-    height: 100px;
-    width: 100px;
+}
+
+@media only screen and (min-width: 880px) {
+  #home{
+    height: 100vh;
+  }
+  #hero-img{
+    width: 350px;
+    height: 350px;
+  }
+
+
+  #fedora {
+    height: 40px;
+    width: 40px;
+    float: right;
+  }
+  #about-me-img{
+    height: 500px;
+    width: 400px;
   }
   #gameboys{
-    height: 20em;
-    width: 35em;
+    width: 200px;
+    height: 150px;
+  }
+ 
+}
+
+@media screen and (min-width: 1000px) {
+  #hero-img{
+    width: 500px;
+    height: 500px;
   }
 }
 
-#projects{
-  background-color: #292e38;
-  text-align: center;
-  padding: 1em 15em;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-between;
-  align-items: center;
-  #projects-title{
-    padding: 1em;
-    margin: 0;
-  }
-  h2{
-    padding: 0;
-    font: 2rem;
-    text-decoration: dashed;
-  }
-  video{
-    width: 60%;
-    height: auto;
-  }
-  #weather{
-    padding: 5em 0 5em 0;
-  }
-  .web-page-video{
-    width: 100%;
-  }
-  li{
-    margin-bottom: 1em;
-  }
-}
 
-#thanks{
-  text-align: center;
-}
