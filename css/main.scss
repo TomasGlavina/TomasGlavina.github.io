@@ -1,13 +1,20 @@
-$primary: #74dfe0; 
-$secondary: #d8d674;
-$dark: #1f1e1e;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+$primary: #9ADCFF; 
+$secondary: #FFF89A;
+$danger: #FF8AAE;
+$dark: #00030e;
 $font-family-monospace: 'Inconsolata', monospace;
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
+body{
+  font-family: 'Inconsolata', monospace;
+  color: #F9F9F9;
+}
 
 h1{
-  font-family: 'Inconsolata', monospace;
+  font-family: 'VT323', monospace;
 }
 
 #home {
@@ -25,7 +32,7 @@ h1{
   padding-top: 10%;
 }
 
-#about-me-img{
+.about-me-img{
   height: 300px;
   width: 200px;
   border-radius: 10%;
@@ -39,7 +46,13 @@ h1{
 }
 
 video{
-  width: 410px;
+  width: 350px;
+}
+
+.me-img{
+  width: 100%;
+  display: flex;
+ justify-content: center;
 }
 
 #gameboys{
@@ -54,7 +67,7 @@ header{
   }
 }
 
-@media only screen and (min-width: 880px) {
+@media only screen and (min-width: 830px) {
   #home{
     height: 100vh;
   }
@@ -63,19 +76,27 @@ header{
     height: 350px;
   }
 
+  .me-img{
+    display: block;
+    width: 50%;
+  }
 
   #fedora {
     height: 40px;
     width: 40px;
     float: right;
   }
-  #about-me-img{
-    height: 500px;
+  .about-me-img{
+    height: 550px;
     width: 400px;
   }
   #gameboys{
     width: 200px;
     height: 150px;
+  }
+
+  video{
+    width: 700px;
   }
  
 }
@@ -84,6 +105,13 @@ header{
   #hero-img{
     width: 500px;
     height: 500px;
+  }
+  li{
+
+    img{
+      width: 24px;
+      height: 24px;
+    }
   }
 }
 

@@ -1,198 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tomi Glavina</title>
-  <script src="https://kit..com/1c2710136e.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomi Glavina</title>
+    <script src="https://kit.fontawesome.com/1c2710136e.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;800&display=swap"
+      rel="stylesheet">
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;800&display=swap" rel="stylesheet">
-  <!-- CSS only -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/main.css" />
-</head>
-
-<body cz-shortcut-listen="true">
-  <header class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-    <nav class="container-xxl">
-      <a href="/" class="navbar-brand me-0 me-lg-3 d-flex" aria-label="Tomas Glavina">
-        <img src="images/linux-terminal.png" alt="" width="30" height="32">
-        <h1 class="fs-4">&nbsp;Tomas Glavina</h1>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-        data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div  id="bdNavbar" class="collapse navbar-collapse">
-          <h5 class="offcanvas-title text-white d-lg-none">Sections</h5>  
+  <body cz-shortcut-listen="true">
+    <header class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+      <nav class="container-xxl">
+        <a href="/" class="navbar-brand d-flex" aria-label="Tomas Glavina">
+          <img src="images/linux-terminal.png" alt="" width="35" height="40">
+          <h1 class="fs-2">&nbsp;Tomas Glavina</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#bdNavbar" aria-controls="bdNavbar"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="bdNavbar" class="collapse navbar-collapse">
+          <h5 class="offcanvas-title d-lg-none">Sections</h5>
           <hr class="d-lg-none text-white-50">
           <ul class="navbar-nav flex-row flex-wrap">
-            <li class="nav-item col-6 col-lg-auto"><a class="nav-link py-2 px-0 px-lg-2 active" aria-current="page"
+            <li class="nav-item col-6 col-lg-auto"><a class="nav-link py-2 px-0
+                px-lg-2 active" aria-current="page"
                 href="#home"> Home</a></li>
-            <li class="nav-item col-6 col-lg-auto"><a class="nav-link py-2 px-0 px-lg-2" href="#about-me">About</a></li>
-            <li class="nav-item col-6 col-lg-auto"><a class="nav-link py-2 px-0 px-lg-2" href="#projects">Projects</a>
+            <li class="nav-item col-6 col-lg-auto"><a class="nav-link py-2 px-0
+                px-lg-2" href="#about-me">About</a></li>
+            <li class="nav-item col-6 col-lg-auto"><a class="nav-link py-2 px-0
+                px-lg-2" href="#projects">Projects</a>
             </li>
-            <li class="nav-item col-6 col-lg-auto"><a class="nav-link py-2 px-0 px-lg-2" href="#contact">Contact Me</a>
+            <li class="nav-item col-6 col-lg-auto"><a class="nav-link py-2 px-0
+                px-lg-2" href="#contact">Contact Me</a>
             </li>
           </ul>
-          <h5 class="offcanvas-title pt-2 text-white d-lg-none">Social Media</h5>
+          <h5 class="offcanvas-title pt-2 d-lg-none">Social Media</h5>
           <hr class="d-lg-none text-white-50">
           <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
-            <li class="nav-item col-6 col-lg-auto"><a class="nav-link py-2 px-0 px-lg-2"
+            <li class="nav-item col-6 col-lg-auto"><a class="nav-link py-2 px-0
+                px-lg-2"
                 href="http://github.com/TomasGlavina">
-                <img src="/images/github-1596821.svg" height="32" width="32">
+                <img src="/images/github-1596821.svg" height="33" width="33">
                 <small class="d-lg-none ms-1 fs-6">Github</small>
               </a>
             </li>
-            <li class="nav-item col-6 col-lg-auto"> <a class="nav-link py-2 px-0 px-lg-2"
-              href="http://github.com/TomasGlavina"> 
-              <img src="/images/in-1596860.svg" height="32" width="32">
-              <small class="d-lg-none ms-1 fs-6">LinkedIn</small>
+            <li class="nav-item col-6 col-lg-auto"> <a class="nav-link py-2 px-0
+                px-lg-2"
+                href="https://www.linkedin.com/in/tomas-glavina-18a8a11aa/">
+                <img src="/images/in-1596860.svg" height="34" width="34">
+                <small class="d-lg-none ms-1 fs-6">LinkedIn</small>
               </a>
             </li>
-            <li class="nav-item col-6 col-lg-auto"> <a class="nav-link py-2 px-0 px-lg-2"
-              href="http://github.com/TomasGlavina"> 
-              <img src="/images/discord-1596824.svg" height="32" width="32" >
-              <small class="d-lg-none ms-1 fs-6">Discord</small>
-             </a> 
+            <li class="nav-item col-6 col-lg-auto"> <a class="nav-link py-2 px-0
+                px-lg-2"
+                href="https://www.instagram.com/tomiglavina/">
+                <img src="/images/instagram-1596820.svg" height="33" width="33">
+                <small class="d-lg-none ms-1 fs-6">Instagram</small>
+              </a>
             </li>
-            <li class="nav-item col-6 col-lg-auto"> <a class="nav-link py-2 px-0 px-lg-2"
-              href="http://github.com/TomasGlavina"> 
-              <img src="/images/blog-1596827.svg" height="34" width="34" >
-              <small class="d-lg-none ms-1 fs-6">Blog (coming soon)</small>
-             </a> 
+            <li class="nav-item col-6 col-lg-auto"> <a class="nav-link py-2 px-0
+                px-lg-2"
+                href="">
+                <img src="/images/blog-1596827.svg" height="32" width="32">
+                <small class="d-lg-none ms-1 fs-6">Blog (coming soon)</small>
+              </a>
             </li>
           </ul>
-      </div>
-    </nav>
-  </header>
-  <section class="container-fluid justify-content-end bg-dark text-secondary px-4 py-5" id="home">
-    <div class="container py-5">
-      <div class="row flex-lg-row align-items-center g-5 py-5">
-        <div class="col-lg-6">
-          <h1 class="col-md-8 fs-2 text-secondary">Ciao, I am </h1>
-          <h1 class="display-4 fw-bold lh-1 mb-3 text-primary" id="hero-title">Tomas Glavina</h1>
-          <p class="lead text-white">I'm an Argentinean-Italian Software Engineering student at TAMK in Tampere,
-            Finland.</p>
-          <a role="button" class="btn btn-primary" href="files/" download="Glavina_Resume.pdf">Download my CV!</a>
         </div>
-        <div class="col-10 col-sm-8 col-lg-6 d-flex justify-content-center">
-          <img class="d-block mx-lg-auto img-fluid" id="hero-img" src="/images/me-inca.jpeg"
-            alt="Home Image of me and my dog." loading="lazy" />
+      </nav>
+    </header>
+    <section class="container-fluid justify-content-end bg-dark text-secondary
+      px-4 py-5" id="home">
+      <div class="container py-5">
+        <div class="row flex-lg-row align-items-center g-5 py-5">
+          <div class="col-lg-6">
+            <h1 class="col-md-8 fs-2 text-secondary">Ciao, I am </h1>
+            <h1 class="display-1 fw-bold lh-1 mb-3 text-primary"
+              id="hero-title">Tomas Glavina</h1>
+            <p class="lead text-white-50">I'm an Argentinean-Italian Software
+              Engineering student at TAMK in Tampere,
+              Finland.</p>
+            <a role="button" class="btn btn-primary" href="files/"
+              download="Glavina_Resume.pdf">Download my CV!</a>
+          </div>
+          <div class="col-10 col-sm-8 col-lg-6 d-flex justify-content-center">
+            <img class="d-block mx-lg-auto img-fluid" id="hero-img"
+              src="/images/me-inca.jpeg"
+              alt="Home Image of me and my dog." loading="lazy" />
+          </div>
         </div>
-      </div>
-      <div id="callToAction" class="container justify-content-center">
-        <p class="fs-5 mb-4 text-center">Scroll Down ↓</p>
-      </div>
-  </section>
-  <section class="bg-dark text-secondary px-4 py-5 text-white" id="about-me">
-    <div class="container">
-      <h1 class="display-4 fw-bold lh-1 mb-3 text-center text-primary">About me</h1>
-      <div class="row flex-lg-row align-items-center g-5 py-5" id="about-text">
-        <div class="col-10col-lg-6 d-flex justify-content-center">
-          <img class="d-block mx-lg-auto img-fluid" id="about-me-img" src="images/IMG_20210918_184018_073.jpg"
-            alt="me staring at the ocean">
+        <div id="callToAction" class="container justify-content-center">
+          <p class="fs-5 mb-4 text-center">Scroll Down ↓</p>
         </div>
-        <div class="col-lg-6 col-sm-2 ">
-          <img id="fedora" src="/images/fedora.png" alt="fedora linux logo">
-          <p class="fs-6 mb-4">
-            Hi! I am Tomas Glavina. I'm 26 years old (90s kid!) and I'm from Buenos Aires, Argentina. I am a passionate
-            person about technology and in 2020 I found programming and I was never able to stop. My main languages are
-            Java,
-            C/C++ and JavaScript.
-            <br>Currently, I am studying Software Engineering in Tampere University of Applied Sciences where I will be
-            a
-            tutor for the new students next year, which I'm very excited about!
-            I finished my first year with a good 4,69/5 overall grade and also completed a 3rd year course of Operative
-            Systems and Linux Programming, since I love Linux and I wanted to learn
-            more about it and programming C in the command line.
-            <br> Besides school, I am also learning web development in Django and Bash scripting by my own. I hope to
-            finish the summer of 2022 with at least a project of each topic to show.
-            My hobbies are going on hikes with my wife and dog, reading (The Hobbit, best book ever), playing football
-            (Let's go Ilves!), learning more about coding and spending time with my friends.
-          </p>
-        </div>
-        <div class="d-flex justify-content-center">
-          <img id="gameboys" src="/images/poke.jpg" alt="gameboys with their pokemon games">
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="text-white bg-dark " id="projects">
-    <div class="container">
-      <h1 class="display-4 fw-bold lh-1 mb-3 text-center text-primary" id="projects-title">My projects</h1>
-      <div id="hotel d-flex justify-content-center">
-        <h2>Hotel App</h2>
-        <video class="" controls>
-          <source src="videos/hotel-sample.webm" type="video/mp4">
-        </video>
-        <ul class="text">
-          <li><a href="https://github.com/TomasGlavina/HotelApp">Github Repository</a></li>
-          <li>Written in C++, for our first programming languages course. Tried best clean code methods, with a nice
-            commented code.</li>
-          <li> The program works as a Hotel
-            program where the user gets the option to reserve a room, as well as checking before hand if the specific
-            room is available and checking out. For checking out, the user knows the booking number
-            reservation, which is printed in the invoice (it is assumed in this project that the user pays automatically
-            the
-            invoice when checking out) and lastly, the user can print the invoice before the check out, if he/she wishes
-            so.</li>
-          <li>
-            In a nutshell, the code works as follows: it first do the preparations, creating a seed for the random
-            rooms,
-            then creating the vectors and giving these vectors the same amount of elements as the random number,
-            setting up the prices, room types etc. The customer elements at this point are empty and will only get
-            values
-            when an actual customer reserves a room. </li>
-          <li>
-            After the preparations, the main function calls the start function, taking the hotel and customer vectors as
-            parameters. The start function prints some welcome message and then starts the big loop that keeps the
-            program running. It is an infinite loop that it only stops either if the amount of free rooms is 0 (gets
-            full)
-            or if the user presses 0.</li>
-          <li>In this project, what I focused the most was in the user input and its validation. I contemplated most of
-            the wrong inputs that a user can do:</li>
-        </ul>
-        <video id="error-handler-hotel" class="hotel-video" controls>
-          <source src="/videos/error-sample.webm" type="video/mp4">
-        </video>
-      </div>
-      <div id="weather">
-        <h2>Weather App</h2>
-        <video class="web-page-video" controls>
-          <source src="videos/2022-06-29 13-00-03.mp4" type="video/mp4">
-        </video>
-        <ul class="text mb-0">
-          <li><a href="https://github.com/TomasGlavina/WeatherPage">Github Repository</a></li>
-          <li>This web app was the final assignment for our Web Development course at TAMK</li>
-          <li>It is design to show weather data gathered by the school's weather station and provided by an API also
-            from
-            TAMK.</li>
-          <li>Languages used: HTML, CSS, JavaScript</li>
-          <li>I wanted to do a single HTML page that it updates its contents according to the data requested by the
-            user.
-          </li>
-          <li>UI is simple and easy to use, trying to be as clean as possible regardless of the requirements from the
-            teacher.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-  <section class="bg-dark text-white p-4 mb-0">
-    <div class="container">
-      <h1 class="display-7">Thank you for visiting my page! <br>Have a beautiful day!</p>
-    </div>
-  </section>
+      </section>
+      <section class="bg-dark px-4 py-5" id="about-me">
+        <div class="container">
+          <h1 class="display-4 fw-bold lh-1 mb-3 text-center text-primary">About
+            me</h1>
+          <div class="row flex-lg-row align-items-center g-5 py-5"
+            id="about-text">
+            <div class="col-10 col-sm-6 col-lg-6 me-img">
+              <img class="d-block mx-lg-auto img-fluid about-me-img"
+                src="images/IMG_20210918_184018_073.jpg"
+                alt="me staring at the ocean">
+            </div>
+            <div class="col-lg-6 col-sm-4">
+              <img id="fedora" src="/images/fedora.png" alt="fedora linux logo">
+              <p class="fs-5 mb-4">
+                Hi! I am Tomas Glavina. I'm 26 years old (90s kid!) and I'm from
+                Buenos Aires, Argentina.
+                <br>Currently, I am studying Software Engineering in Tampere
+                University of Applied Sciences where I will be
+                a tutor for the new students next year, which I'm very excited
+                about!<br>
+                I finished my first year with a good 4,69/5 overall grade and I
+                already completed a 3rd year course 'Operative
+                Systems and Linux Programming', because I love Linux and I
+                wanted to learn
+                more about it and programming C in the command line.
 
-    <!-- JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-    crossorigin="anonymous"></script>
+              </p>
+            </div>
+            <div class="row flex-lg-row flex-sm-row flex-column-reverse
+              align-items-center g-5" id="about-text">
+              <div class="col-lg-6 col-sm-4">
+                <p class="fs-5 mb-4">Besides school, I am also learning
+                  Full-Stack development with Django, Bash scripting and doing
+                  CTFs (usually Linux Forensics and Reverse Engineering). Also I
+                  am learning Data Structures and Algorithms, by reading
+                  Introduction to Algorithms by Thomas H. Cormen and applying them in Java.
+                  <br>
+                  My hobbies are going on hikes with my wife and dog, reading
+                  (The Hobbit, best book ever), playing football
+                  (Let's go Ilves!), learning more about coding and spending
+                  time with my friends.</p>
+              </div>
+              <div class="col-10 col-sm-7 col-lg-6 me-img mb-4">
+                <img class="d-block mx-lg-auto img-fluid about-me-img"
+                  src="images/20220724_120228272_iOS.png" alt="me-supboard">
+              </div>
 
-</body>
+            </div>
+          </div>
+        </div>
+        <div class="container px-4 py-5">
+          <h2 class="pb-2 border-bottom">Skills</h2>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4
+            g-4 py-5">
+            <div class="col d-flex align-items-start">
+              <i class="fa-brands fa-java fa-2xl"></i>
+              <div class="ps-3">
+                <h4 class="fw-bold mb-0">Java</h4>
+                <p>Core - OOP - Functional Programming - Dependency Injection - Var-Args - Packages </p>
+              </div>
+            </div>
+            <div class="col d-flex align-items-start">
+              <i class="fa-solid fa-terminal fa-xl"></i>
+              <div class="ps-3">
+                <h4 class="fw-bold mb-0">C/C++</h4>
+                <p>C: Core - File I/O - Pointes - Forks - Stack & Queues - Thread Pools - Semaphores - Deadlocks - Threads - Pipes
+                  <br>C++: OOP - Structs  - Exception Handling </p>
+              </div></div>
+            <div class="col d-flex align-items-start">
+              <i class="fa-brands fa-linux fa-2xl"></i>
+              <div class="ps-3">
+                <h4 class="fw-bold mb-0">Linux</h4>
+                <p>My daily driver (Fedora) - File Systems - Bash Scripting - Vim - Package Management (APT, DNF and Pacman) - Processes - SSH <br>
+                Installed many times Arch and Debian, the right way. </p>
+              </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <i class="fa-solid fa-code-branch fa-2xl"></i>
+                <div class="ps-3">
+                  <h4 class="fw-bold mb-0">Git</h4>
+                  <p>Core commands</p>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+              <i class="fa-solid fa-code fa-xl"></i>
+              <div class="ps-3">
+                <h4 class="fw-bold mb-0">HTML & CSS</h4>
+                <p>HTML: Core HTML Tags - Semantic Syntax <br>
+                CSS: Basics - Transformation - Transitions - Responsive Layouts - SASS - Bootstrap</p>
+              </div></div>
+            <div class="col d-flex align-items-start">
+              <i class="fa-brands fa-js-square fa-2xl"></i>
+              <div class="ps-3">
+                <h4 class="fw-bold mb-0">JavaScript + NodeJS</h4>
+                <p>Core Coding - OOP - Dom Manipulation - Server handling - Learning React </p>
+              </div></div>
+            <div class="col d-flex align-items-start">
+              <i class="fa-brands fa-python fa-2xl"></i>
+              <div class="ps-3">
+                <h4 class="fw-bold mb-0">Python + Django</h4>
+                <p>Core Python - OOP - CTF decoding - </p>
+              </div></div>
+          </div>
+        </section>
+        <section class="bg-dark"id="projects">
+          <div class="container">
+            <h1 class="display-4 fw-bold lh-1 mb-3 text-center text-primary"
+              id="projects-title">My projects</h1>
+            <div id="hotel d-flex justify-content-center">
+              <h2>Hotel App</h2>
+              <video class="" controls>
+                <source src="videos/hotel-sample.webm" type="video/mp4">
+              </video>
+              <ul class="text">
+                <li><a href="https://github.com/TomasGlavina/HotelApp">Github
+                    Repository</a></li>
+                <li>Written in C++, for our first programming languages course.
+                  Tried best clean code methods, with a nice
+                  commented code.</li>
+                <li> The program works as a Hotel
+                  program where the user gets the option to reserve a room, as
+                  well as checking before hand if the specific
+                  room is available and checking out. For checking out, the user
+                  knows the booking number
+                  reservation, which is printed in the invoice (it is assumed in
+                  this project that the user pays automatically
+                  the
+                  invoice when checking out) and lastly, the user can print the
+                  invoice before the check out, if he/she wishes
+                  so.</li>
+                <li>
+                  In a nutshell, the code works as follows: it first do the
+                  preparations, creating a seed for the random
+                  rooms,
+                  then creating the vectors and giving these vectors the same
+                  amount of elements as the random number,
+                  setting up the prices, room types etc. The customer elements
+                  at this point are empty and will only get
+                  values
+                  when an actual customer reserves a room. </li>
+                <li>
+                  After the preparations, the main function calls the start
+                  function, taking the hotel and customer vectors as
+                  parameters. The start function prints some welcome message and
+                  then starts the big loop that keeps the
+                  program running. It is an infinite loop that it only stops
+                  either if the amount of free rooms is 0 (gets
+                  full)
+                  or if the user presses 0.</li>
+                <li>In this project, what I focused the most was in the user
+                  input and its validation. I contemplated most of
+                  the wrong inputs that a user can do:</li>
+              </ul>
+              <video id="error-handler-hotel" class="hotel-video" controls>
+                <source src="/videos/error-sample.webm" type="video/mp4">
+              </video>
+            </div>
+            <div id="weather">
+              <h2>Weather App</h2>
+              <video class="web-page-video" controls>
+                <source src="videos/2022-06-29 13-00-03.mp4" type="video/mp4">
+              </video>
+              <ul class="text mb-0">
+                <li><a href="https://github.com/TomasGlavina/WeatherPage">Github
+                    Repository</a></li>
+                <li>This web app was the final assignment for our Web
+                  Development course at TAMK</li>
+                <li>It is design to show weather data gathered by the school's
+                  weather station and provided by an API also
+                  from
+                  TAMK.</li>
+                <li>Languages used: HTML, CSS, JavaScript</li>
+                <li>I wanted to do a single HTML page that it updates its
+                  contents according to the data requested by the
+                  user.
+                </li>
+                <li>UI is simple and easy to use, trying to be as clean as
+                  possible regardless of the requirements from the
+                  teacher.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="bg-dark p-4 mb-0">
+          <div class="container">
+            <h1 class="display-7">Thank you for visiting my page! <br>Have a
+              beautiful day!</p>
+          </div>
+        </section>
 
-</html>
+        <!-- JavaScript Bundle with Popper -->
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+          crossorigin="anonymous"></script>
+
+      </body>
+
+    </html>
