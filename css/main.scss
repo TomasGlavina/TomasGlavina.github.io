@@ -1,118 +1,116 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-$primary: #9ADCFF; 
-$secondary: #FFF89A;
-$danger: #FF8AAE;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+$primary: #9adcff;
+$secondary: #fff89a;
+$danger: #ff8aae;
+$success: #a6e266;
+$light: #204559;
 $dark: #00030e;
-$font-family-monospace: 'Inconsolata', monospace;
+$font-family-monospace: "Inconsolata", monospace;
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
-body{
-  font-family: 'Inconsolata', monospace;
-  color: #F9F9F9;
+html {
+    scroll-padding-top: 4rem !important;
 }
 
-h1{
-  font-family: 'VT323', monospace;
+body {
+    font-family: "Inconsolata", monospace;
+    color: #f9f9f9;
 }
 
 #home {
-  height: 100vh;
-}
-
-#hero-img{
-  width: 300px;
-  height: 300px;
-  border-radius: 50%; 
-  object-fit: cover;
-}
-
-#about-text{
-  padding-top: 10%;
-}
-
-.about-me-img{
-  height: 300px;
-  width: 200px;
-  border-radius: 10%;
-  box-shadow: 3px 5px 10px #1d1d1a;
-}
-
-#fedora{
-  height: 40px;
-  width: 40px;
-  float: right;
-}
-
-video{
-  width: 350px;
-}
-
-.me-img{
-  width: 100%;
-  display: flex;
- justify-content: center;
-}
-
-#gameboys{
-  width: 50px;
-  height: 20px;
-}
-
-header{
-  img{
-    -webkit-filter: invert(.9); /* safari 6.0 - 9.0 */
-    filter: invert(.9);
-  }
-}
-
-@media only screen and (min-width: 830px) {
-  #home{
     height: 100vh;
-  }
-  #hero-img{
-    width: 350px;
-    height: 350px;
-  }
+}
 
-  .me-img{
-    display: block;
-    width: 50%;
-  }
+#hero-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
 
-  #fedora {
+#about-text {
+    padding-top: 10%;
+}
+
+.about-me-img {
+    height: 300px;
+    width: 200px;
+    border-radius: 10%;
+    box-shadow: 3px 5px 10px #1d1d1a;
+}
+
+#fedora {
     height: 40px;
     width: 40px;
     float: right;
-  }
-  .about-me-img{
-    height: 550px;
-    width: 400px;
-  }
-  #gameboys{
-    width: 200px;
-    height: 150px;
-  }
+}
 
-  video{
-    width: 700px;
-  }
- 
+video {
+    width: 320px;
+}
+
+.me-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#gameboys {
+    width: 50px;
+    height: 20px;
+}
+
+header {
+    img {
+        -webkit-filter: invert(0.9); /* safari 6.0 - 9.0 */
+        filter: invert(0.9);
+    }
+}
+
+@media only screen and (min-width: 830px) {
+    #home {
+        height: 100vh;
+    }
+    #hero-img {
+        width: 350px;
+        height: 350px;
+    }
+
+    .me-img {
+        display: block;
+        width: 50%;
+    }
+
+    #fedora {
+        height: 40px;
+        width: 40px;
+        float: right;
+    }
+    .about-me-img {
+        height: 550px;
+        width: 400px;
+    }
+    #gameboys {
+        width: 200px;
+        height: 150px;
+    }
+
+    video {
+        width: 700px;
+    }
 }
 
 @media screen and (min-width: 1000px) {
-  #hero-img{
-    width: 500px;
-    height: 500px;
-  }
-  li{
-
-    img{
-      width: 24px;
-      height: 24px;
+    #hero-img {
+        width: 500px;
+        height: 500px;
     }
-  }
+    li {
+        img {
+            width: 24px;
+            height: 24px;
+        }
+    }
 }
-
-

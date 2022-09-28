@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tomi Glavina</title>
-    <script src="https://kit.fontawesome.com/1c2710136e.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/1c2710136e.js"
+      crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -28,8 +29,9 @@
           <h1 class="fs-2">&nbsp;Tomas Glavina</h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-          data-bs-target="#bdNavbar" aria-controls="bdNavbar"
-          aria-expanded="false" aria-label="Toggle navigation">
+          data-bs-target="#bdNavbar"
+          aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle
+          navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div id="bdNavbar" class="collapse navbar-collapse">
@@ -37,12 +39,11 @@
           <hr class="d-lg-none text-white-50">
           <ul class="navbar-nav flex-row flex-wrap">
             <li class="nav-item col-6 col-lg-auto"><a class="nav-link py-2 px-0
-                px-lg-2 active" aria-current="page"
-                href="#home"> Home</a></li>
+                px-lg-2 active" aria-current="page" href="#home"> Home</a></li>
             <li class="nav-item col-6 col-lg-auto"><a class="nav-link py-2 px-0
                 px-lg-2" href="#about-me">About</a></li>
             <li class="nav-item col-6 col-lg-auto"><a class="nav-link py-2 px-0
-                px-lg-2" href="#projects">Projects</a>
+                px-lg-2" href="index.html#projects">Projects</a>
             </li>
             <li class="nav-item col-6 col-lg-auto"><a class="nav-link py-2 px-0
                 px-lg-2" href="#contact">Contact Me</a>
@@ -52,30 +53,27 @@
           <hr class="d-lg-none text-white-50">
           <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
             <li class="nav-item col-6 col-lg-auto"><a class="nav-link py-2 px-0
-                px-lg-2"
-                href="http://github.com/TomasGlavina">
-                <img src="/images/github-1596821.svg" height="33" width="33">
+                px-lg-2" href="http://github.com/TomasGlavina">
+                <i class="fa-brands fa-github fa-2x"></i>
                 <small class="d-lg-none ms-1 fs-6">Github</small>
               </a>
             </li>
             <li class="nav-item col-6 col-lg-auto"> <a class="nav-link py-2 px-0
                 px-lg-2"
                 href="https://www.linkedin.com/in/tomas-glavina-18a8a11aa/">
-                <img src="/images/in-1596860.svg" height="34" width="34">
+                <i class="fa-brands fa-linkedin fa-2x"></i>
                 <small class="d-lg-none ms-1 fs-6">LinkedIn</small>
               </a>
             </li>
             <li class="nav-item col-6 col-lg-auto"> <a class="nav-link py-2 px-0
-                px-lg-2"
-                href="https://www.instagram.com/tomiglavina/">
-                <img src="/images/instagram-1596820.svg" height="33" width="33">
+                px-lg-2" href="https://www.instagram.com/tomiglavina/">
+                <i class="fa-brands fa-instagram fa-2x"></i>
                 <small class="d-lg-none ms-1 fs-6">Instagram</small>
               </a>
             </li>
             <li class="nav-item col-6 col-lg-auto"> <a class="nav-link py-2 px-0
-                px-lg-2"
-                href="">
-                <img src="/images/blog-1596827.svg" height="32" width="32">
+                px-lg-2" href="">
+                <i class="fa-solid fa-blog fa-2x"></i>
                 <small class="d-lg-none ms-1 fs-6">Blog (coming soon)</small>
               </a>
             </li>
@@ -88,10 +86,10 @@
       <div class="container py-5">
         <div class="row flex-lg-row align-items-center g-5 py-5">
           <div class="col-lg-6">
-            <h1 class="col-md-8 fs-2 text-secondary">Ciao, I am </h1>
+            <h1 class="col-md-8 fs-2">Ciao, I am </h1>
             <h1 class="display-1 fw-bold lh-1 mb-3 text-primary"
               id="hero-title">Tomas Glavina</h1>
-            <p class="lead text-white-50">I'm an Argentinean-Italian Software
+            <p class="text-white">I'm an Argentinean-Italian Software
               Engineering student at TAMK in Tampere,
               Finland.</p>
             <a role="button" class="btn btn-primary" href="files/"
@@ -103,14 +101,15 @@
               alt="Home Image of me and my dog." loading="lazy" />
           </div>
         </div>
-        <div id="callToAction" class="container justify-content-center">
+        <div id="callToAction" class="py-3 container justify-content-center">
           <p class="fs-5 mb-4 text-center">Scroll Down ↓</p>
         </div>
       </section>
       <section class="bg-dark px-4 py-5" id="about-me">
         <div class="container">
-          <h1 class="display-4 fw-bold lh-1 mb-3 text-center text-primary">About
-            me</h1>
+          <h1 class="pb-2 display-4 text-primary text-decoration-underline
+            text-center ">About me</h1>
+
           <div class="row flex-lg-row align-items-center g-5 py-5"
             id="about-text">
             <div class="col-10 col-sm-6 col-lg-6 me-img">
@@ -121,10 +120,12 @@
             <div class="col-lg-6 col-sm-4">
               <img id="fedora" src="/images/fedora.png" alt="fedora linux logo">
               <p class="fs-5 mb-4">
-                Hi! I am Tomas Glavina. I'm 26 years old (90s kid!) and I'm from
+                Hi! I am <span class="text-success">Tomas Glavina</span>. I'm 26
+                years old (90s kid!) and I'm from
                 Buenos Aires, Argentina.
-                <br>Currently, I am studying Software Engineering in Tampere
-                University of Applied Sciences where I will be
+                <br>Currently, I am studying Software Engineering in <span
+                  class="text-success">Tampere
+                  University of Applied Sciences</span> where I will be
                 a tutor for the new students next year, which I'm very excited
                 about!<br>
                 I finished my first year with a good 4,69/5 overall grade and I
@@ -142,16 +143,19 @@
                   Full-Stack development with Django, Bash scripting and doing
                   CTFs (usually Linux Forensics and Reverse Engineering). Also I
                   am learning Data Structures and Algorithms, by reading
-                  Introduction to Algorithms by Thomas H. Cormen and applying them in Java.
+                  Introduction to Algorithms by Thomas H. Cormen and applying
+                  them in Java.
                   <br>
                   My hobbies are going on hikes with my wife and dog, reading
                   (The Hobbit, best book ever), playing football
                   (Let's go Ilves!), learning more about coding and spending
-                  time with my friends.</p>
+                  time with my friends.
+                </p>
               </div>
               <div class="col-10 col-sm-7 col-lg-6 me-img mb-4">
                 <img class="d-block mx-lg-auto img-fluid about-me-img"
-                  src="images/20220724_120228272_iOS.png" alt="me-supboard">
+                  src="images/20220724_120228272_iOS.png"
+                  alt="me-supboard">
               </div>
 
             </div>
@@ -165,128 +169,114 @@
               <i class="fa-brands fa-java fa-2xl"></i>
               <div class="ps-3">
                 <h4 class="fw-bold mb-0">Java</h4>
-                <p>Core - OOP - Functional Programming - Dependency Injection - Var-Args - Packages </p>
+                <p>Core - OOP - Functional Programming - Dependency Injection -
+                  Var-Args - Packages </p>
               </div>
             </div>
             <div class="col d-flex align-items-start">
               <i class="fa-solid fa-terminal fa-xl"></i>
               <div class="ps-3">
                 <h4 class="fw-bold mb-0">C/C++</h4>
-                <p>C: Core - File I/O - Pointes - Forks - Stack & Queues - Thread Pools - Semaphores - Deadlocks - Threads - Pipes
-                  <br>C++: OOP - Structs  - Exception Handling </p>
-              </div></div>
+                <p>C: Core - File I/O - Pointes - Forks - Stack & Queues -
+                  Thread Pools - Semaphores - Deadlocks - Threads - Pipes
+                  <br>C++: OOP - Structs - Exception Handling
+                </p>
+              </div>
+            </div>
             <div class="col d-flex align-items-start">
               <i class="fa-brands fa-linux fa-2xl"></i>
               <div class="ps-3">
                 <h4 class="fw-bold mb-0">Linux</h4>
-                <p>My daily driver (Fedora) - File Systems - Bash Scripting - Vim - Package Management (APT, DNF and Pacman) - Processes - SSH <br>
-                Installed many times Arch and Debian, the right way. </p>
+                <p>My daily driver (Fedora) - File Systems - Bash Scripting -
+                  Vim - Package Management (APT, DNF and Pacman) - Processes -
+                  SSH </p>
               </div>
             </div>
             <div class="col d-flex align-items-start">
-                <i class="fa-solid fa-code-branch fa-2xl"></i>
-                <div class="ps-3">
-                  <h4 class="fw-bold mb-0">Git</h4>
-                  <p>Core commands</p>
-                </div>
+              <i class="fa-solid fa-code-branch fa-2xl"></i>
+              <div class="ps-3">
+                <h4 class="fw-bold mb-0">Git</h4>
+                <p>Core skills</p>
+              </div>
             </div>
             <div class="col d-flex align-items-start">
               <i class="fa-solid fa-code fa-xl"></i>
               <div class="ps-3">
                 <h4 class="fw-bold mb-0">HTML & CSS</h4>
                 <p>HTML: Core HTML Tags - Semantic Syntax <br>
-                CSS: Basics - Transformation - Transitions - Responsive Layouts - SASS - Bootstrap</p>
-              </div></div>
+                  CSS: Basics - Transformation - Transitions - Responsive
+                  Layouts - SASS - Bootstrap</p>
+              </div>
+            </div>
             <div class="col d-flex align-items-start">
               <i class="fa-brands fa-js-square fa-2xl"></i>
               <div class="ps-3">
                 <h4 class="fw-bold mb-0">JavaScript + NodeJS</h4>
-                <p>Core Coding - OOP - Dom Manipulation - Server handling - Learning React </p>
-              </div></div>
+                <p>Core Coding - OOP - Dom Manipulation - Server handling -
+                  Learning React </p>
+              </div>
+            </div>
             <div class="col d-flex align-items-start">
               <i class="fa-brands fa-python fa-2xl"></i>
               <div class="ps-3">
                 <h4 class="fw-bold mb-0">Python + Django</h4>
                 <p>Core Python - OOP - CTF decoding - </p>
-              </div></div>
+              </div>
+            </div>
           </div>
         </section>
-        <section class="bg-dark"id="projects">
+        <section class="bg-dark" id="projects">
           <div class="container">
-            <h1 class="display-4 fw-bold lh-1 mb-3 text-center text-primary"
-              id="projects-title">My projects</h1>
-            <div id="hotel d-flex justify-content-center">
-              <h2>Hotel App</h2>
-              <video class="" controls>
-                <source src="videos/hotel-sample.webm" type="video/mp4">
-              </video>
-              <ul class="text">
-                <li><a href="https://github.com/TomasGlavina/HotelApp">Github
-                    Repository</a></li>
-                <li>Written in C++, for our first programming languages course.
-                  Tried best clean code methods, with a nice
-                  commented code.</li>
-                <li> The program works as a Hotel
-                  program where the user gets the option to reserve a room, as
-                  well as checking before hand if the specific
-                  room is available and checking out. For checking out, the user
-                  knows the booking number
-                  reservation, which is printed in the invoice (it is assumed in
-                  this project that the user pays automatically
-                  the
-                  invoice when checking out) and lastly, the user can print the
-                  invoice before the check out, if he/she wishes
-                  so.</li>
-                <li>
-                  In a nutshell, the code works as follows: it first do the
-                  preparations, creating a seed for the random
-                  rooms,
-                  then creating the vectors and giving these vectors the same
-                  amount of elements as the random number,
-                  setting up the prices, room types etc. The customer elements
-                  at this point are empty and will only get
-                  values
-                  when an actual customer reserves a room. </li>
-                <li>
-                  After the preparations, the main function calls the start
-                  function, taking the hotel and customer vectors as
-                  parameters. The start function prints some welcome message and
-                  then starts the big loop that keeps the
-                  program running. It is an infinite loop that it only stops
-                  either if the amount of free rooms is 0 (gets
-                  full)
-                  or if the user presses 0.</li>
-                <li>In this project, what I focused the most was in the user
-                  input and its validation. I contemplated most of
-                  the wrong inputs that a user can do:</li>
-              </ul>
-              <video id="error-handler-hotel" class="hotel-video" controls>
-                <source src="/videos/error-sample.webm" type="video/mp4">
-              </video>
-            </div>
-            <div id="weather">
-              <h2>Weather App</h2>
-              <video class="web-page-video" controls>
-                <source src="videos/2022-06-29 13-00-03.mp4" type="video/mp4">
-              </video>
-              <ul class="text mb-0">
-                <li><a href="https://github.com/TomasGlavina/WeatherPage">Github
-                    Repository</a></li>
-                <li>This web app was the final assignment for our Web
-                  Development course at TAMK</li>
-                <li>It is design to show weather data gathered by the school's
-                  weather station and provided by an API also
-                  from
-                  TAMK.</li>
-                <li>Languages used: HTML, CSS, JavaScript</li>
-                <li>I wanted to do a single HTML page that it updates its
-                  contents according to the data requested by the
-                  user.
-                </li>
-                <li>UI is simple and easy to use, trying to be as clean as
-                  possible regardless of the requirements from the
-                  teacher.</li>
-              </ul>
+            <h1 class="pb-2 display-4 text-primary text-center
+              text-decoration-underline">Projects</h1>
+
+            <div class="container">
+              <div class="row row-cols-1 row-cols-md-3 g-4 py-5 text-dark">
+                <div class="col">
+                  <a href="hotelApp.html" class="nav-link">
+                    <div class="card card-cover h-100 overflow-hidden bg-light
+                      text-white rounded-4 shadow-lg">
+                      <img src="images/hotel-tn1 (copy).png" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Hotel Management Program - CLI</h5>
+                        <p class="card-text">C++ program where the user can
+                          reserve, checkout, and check rooms of a Hotel. Program
+                          works until exit or filling the Hotel.</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col">
+                  <a href="weatherApp.html" class="nav-link">
+                    <div class="card card-cover h-100 overflow-hidden bg-light
+                      text-white rounded-4 shadow-lg">
+                      <img src="images/weather-page-sc.png" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Weather App</h5>
+                        <p class="card-text">Weather App that fetches the data
+                          from our school API and displays it in the browser.
+                          Many views for data, such as specific pages for
+                          Temperature,
+                          Wind Speed, etc. Also graphs are available in the
+                          specific view.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col">
+                  <a href="" class="nav-link">
+                    <div class="card card-cover h-100 overflow-hidden bg-light
+                      text-white rounded-4 shadow-lg">
+                      <img src="images/sorting-alg-vis.png" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Sort Algorithm Visualizer</h5>
+                        <p class="card-text">This project was a way to visualize the sorting algorithms in Java. Also learning how to use JavaFX.</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
