@@ -10277,6 +10277,11 @@ body {
   color: #f9f9f9;
 }
 
+#video-visualizer {
+  height: 500px;
+  width: 300px;
+}
+
 #home {
   height: 100vh;
 }

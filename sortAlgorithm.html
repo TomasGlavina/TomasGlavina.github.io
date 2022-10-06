@@ -30,8 +30,7 @@
                 <a
                     href="/"
                     class="navbar-brand d-flex"
-                    aria-label="Tomas
-                    Glavina"
+                    aria-label="Tomas Glavina"
                 >
                     <img
                         src="images/linux-terminal.png"
@@ -107,6 +106,7 @@
                                 href="https://www.linkedin.com/in/tomas-glavina-18a8a11aa/"
                             >
                                 <i class="fa-brands fa-linkedin fa-2x"></i>
+
                                 <small class="d-lg-none ms-1 fs-6"
                                     >LinkedIn</small
                                 >
@@ -139,100 +139,42 @@
             class="container-fluid justify-content-end bg-dark text-secondary px-4 py-5"
         >
             <div class="container py-5">
-                <div id="hotel d-flex justify-content-center">
+                <div id="d-flex justify-content-center">
                     <h1
                         class="pb-2 display-4 text-primary text-decoration-underline text-center"
                     >
-                        Hotel App
+                        Sorting Algorithm Visualizer
                     </h1>
+                    <div class="container d-flex justify-content-center p-2">
 
-                    <ul class="nav nav-tabs">
-                        <li class="nav-item">
-                            <a
-                                class="nav-link active bg-primary text-black"
-                                aria-current="page"
-                                id="example"
-                                onClick="showExample(); return false;"
-                                >Example video
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="error" onClick="showError()"
-                                >Error Handling</a
-                            >
-                        </li>
-                    </ul>
-                    <div>
-                        <video id="video-example" class="" controls>
+                        <video class="web-page-video" id="video-visualizer" controls>
                             <source
-                                src="videos/hotel-sample.webm"
-                                type="video/mp4"
-                                
+                            src="videos/visualizer-video.webm"
+                            type="video/webm"
                             />
                         </video>
                     </div>
                     <div class="container text-white">
-                        <a href="https://github.com/TomasGlavina/HotelApp"
-                            >Github Repository</a
-                        >
-                        <br />
-                        <p class="text-muted">
-                            Written in C++, for our first programming languages
-                            course. Tried best clean code methods, with a nice
-                            commented code.
-                        </p>
-                        <br />
-                        <h2 class="text-decoration-underline text-success">
-                            What is it?
-                        </h2>
+                        
+                            <a
+                                href="https://github.com/TomasGlavina/SortingAlgorithmVisualizer"
+                               >Github Repository</a
+                            ><br />
+                            <p  class="text-muted">
+                                Written in Java and GUI with JavaFX. This was my own summer project.
+                            </p>
+                        
+                        <h2 class="text-success text-decoration-underline">What is it?</h2>
                         <p>
-                            This is a Hotel program where the user gets the
-                            option to reserve a room, as well as checking before
-                            hand if the specific room is available and checking
-                            out. For checking out, the user knows the booking
-                            number reservation, which is printed in the invoice
-                            (it is assumed in this project that the user pays
-                            automatically the invoice when checking out) and
-                            lastly, the user can print the invoice before the
-                            check out, if he/she wishes so.
+                            This was my first big personal project, to visualize the algorithms that I have been learning. It sorts all the bars according to their height using the Insertion Algorithm.
                         </p>
-                        </p>
-                        In this project, what I focused the most was in the user
-                        input and its validation. I contemplated most of the
-                        wrong inputs that a user can do.<br />
-                        <span class="text-muted fst-italic">
-                            (See "Error Example" video)
-                        </span>
-                        <br />
-                        <h2 class="text-decoration-underline text-success">
-                            How does it work?
-                        </h2>
-                        <p>
-                            In a nutshell, the code works as follows: it first
-                            do the preparations, creating a seed for the random
-                            rooms, then creating the vectors and giving these
-                            vectors the same amount of elements as the random
-                            number, setting up the prices, room types etc. The
-                            customer elements at this point are empty and will
-                            only get values when an actual customer reserves a
-                            room.
-                            <br />
-                            After the preparations, the main function calls the
-                            start function, taking the hotel and customer
-                            vectors as parameters. The start function prints
-                            some welcome message and then starts the big loop
-                            that keeps the program running. It is an infinite
-                            loop that it only stops either if the amount of free
-                            rooms is 0 (gets full) or if the user presses 0.
-                            <br />
-                        </p>
-                        In this project, what I focused the most was in the user
-                        input and its validation. I contemplated most of the
-                        wrong inputs that a user can do.<br />
-                        <span class="text-muted fst-italic">
-                            (See "Error Example" video)
-                        </span>
-                    </div>
+                        <h2 class="text-success text-decoration-underline">How does it work?</h2>    
+                            It has 3 different classes, AlgorithmTest, the driver class that starts the JFrame and runs the program. Then the SortingPanel which extends the JPanel class. This class contains the array, the colors of the bars and does the proper visualization.
+                            Lastly is the Insertion class, which starts a thread, that sleeps each time two bars are being compared, so the algorithm is visible and not instantly. It also takes the whole Panel, so I can utilize the highlightSwap() method in each comparison within the algorithm.
+                            <br/>
+                            This was a huge learning challenge for me, since I didn't know much JavaFX before this. My next challenge will be to make a web app with React that makes this and many more sorting algorithms!
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -243,6 +185,5 @@
             integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
             crossorigin="anonymous"
         ></script>
-        <script src="index.js"></script>
     </body>
 </html>
