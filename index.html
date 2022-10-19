@@ -19,6 +19,7 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css" />
+    <script src="index.js"></script>
   </head>
 
   <body cz-shortcut-listen="true">
@@ -81,7 +82,9 @@
         </div>
       </nav>
     </header>
-    <section class="container-fluid justify-content-end bg-dark text-secondary
+    <div id="content" class="container-fluid justify-content-center bg-dark">
+
+      <section class="container-fluid justify-content-end bg-dark text-secondary
       px-4 py-5" id="home">
       <div class="container py-5">
         <div class="row flex-lg-row align-items-center g-5 py-5">
@@ -110,36 +113,36 @@
           <h1 class="pb-2 display-4 text-primary text-decoration-underline
             text-center ">About me</h1>
 
-          <div class="row flex-lg-row align-items-center g-5 py-5"
+          <div class="row flex-lg-row align-items-center g-3 py-4"
             id="about-text">
-            <div class="col-10 col-sm-6 col-lg-6 me-img">
+            <div class="col-10 col-sm-4 col-lg-6 me-img">
               <img class="d-block mx-lg-auto img-fluid about-me-img"
                 src="images/IMG_20210918_184018_073.jpg"
                 alt="me staring at the ocean">
-            </div>
-            <div class="col-lg-6 col-sm-4">
-              <img id="fedora" src="/images/fedora.png" alt="fedora linux logo">
-              <p class="fs-5 mb-4">
-                Hi! I am <span class="text-success">Tomas Glavina</span>. I'm 26
-                years old (90s kid!) and I'm from
-                Buenos Aires, Argentina.
-                <br>Currently, I am studying Software Engineering in <span
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-4">
+                <img id="fedora" src="images/fedora.png" alt="fedora linux logo">
+                <p class="mb-2 aboutme-text">
+                  Hi! I am <span class="text-success">Tomas Glavina</span>. I'm 26
+                  years old (90s kid!) and I'm from
+                  Buenos Aires, Argentina.
+                  <br>Currently, I am studying Software Engineering in <span
                   class="text-success">Tampere
                   University of Applied Sciences</span> where I will be
-                a tutor for the new students next year, which I'm very excited
-                about!<br>
-                I finished my first year with a good 4,69/5 overall grade and I
-                already completed a 3rd year course 'Operative
-                Systems and Linux Programming', because I love Linux and I
-                wanted to learn
-                more about it and programming C in the command line.
-
-              </p>
-            </div>
-            <div class="row flex-lg-row flex-sm-row flex-column-reverse
-              align-items-center g-5" id="about-text">
-              <div class="col-lg-6 col-sm-4">
-                <p class="fs-5 mb-4">Besides school, I am also learning
+                  a tutor for the new students next year, which I'm very excited
+                  about!<br>
+                  I finished my first year with a good 4,69/5 overall grade and I
+                  already completed a 3rd year course 'Operative
+                  Systems and Linux Programming', because I love Linux and I
+                  wanted to learn
+                  more about it and programming C in the command line.
+                  
+                </p>
+              </div>
+              <div class="row flex-lg-row flex-sm-row flex-column-reverse
+              align-items-center g-3" id="about-text">
+              <div class="col-lg-6 col-sm-6">
+                <p class="mb-4 aboutme-text">Besides school, I am also learning
                   Full-Stack development with Django, Bash scripting and doing
                   CTFs (usually Linux Forensics and Reverse Engineering). Also I
                   am learning Data Structures and Algorithms, by reading
@@ -152,7 +155,7 @@
                   time with my friends.
                 </p>
               </div>
-              <div class="col-10 col-sm-7 col-lg-6 me-img mb-4">
+              <div class="col-10 col-sm-4 col-lg-6 me-img mb-4">
                 <img class="d-block mx-lg-auto img-fluid about-me-img"
                   src="images/20220724_120228272_iOS.png"
                   alt="me-supboard">
@@ -171,7 +174,7 @@
                 <h4 class="fw-bold mb-0">Java</h4>
                 <p>Core - OOP - Functional Programming - Dependency Injection -
                   Var-Args - Packages </p>
-              </div>
+                </div>
             </div>
             <div class="col d-flex align-items-start">
               <i class="fa-solid fa-terminal fa-xl"></i>
@@ -196,7 +199,7 @@
               <i class="fa-solid fa-code-branch fa-2xl"></i>
               <div class="ps-3">
                 <h4 class="fw-bold mb-0">Git</h4>
-                <p>Core skills</p>
+                <p>Core skills: Pull, commits, rebase, merge, branches</p>
               </div>
             </div>
             <div class="col d-flex align-items-start">
@@ -220,7 +223,7 @@
               <i class="fa-brands fa-python fa-2xl"></i>
               <div class="ps-3">
                 <h4 class="fw-bold mb-0">Python + Django</h4>
-                <p>Core Python - OOP - CTF decoding - </p>
+                <p>Core Python - OOP - CTF decoding </p>
               </div>
             </div>
           </div>
@@ -228,15 +231,15 @@
         <section class="bg-dark" id="projects">
           <div class="container">
             <h1 class="pb-2 display-4 text-primary text-center
-              text-decoration-underline">Projects</h1>
-
+            text-decoration-underline">Projects</h1>
+            
             <div class="container">
-              <div class="row row-cols-1 row-cols-md-3 g-4 py-5 text-dark">
+              <div class="row row-cols-1 row-cols-md-1 row-cols-lg-3 g-4 py-5 text-dark">
                 <div class="col">
                   <a href="hotelApp.html" class="nav-link">
                     <div class="card card-cover h-100 overflow-hidden bg-light
-                      text-white rounded-4 shadow-lg">
-                      <img src="images/hotel-tn1 (copy).png" class="card-img-top" alt="...">
+                    text-white rounded-4 shadow-lg">
+                    <img src="images/hotel-tn1 (copy).png" class="card-img-top" alt="...">
                       <div class="card-body">
                         <h5 class="card-title">Hotel Management Program - CLI</h5>
                         <p class="card-text">C++ program where the user can
@@ -267,19 +270,46 @@
                 <div class="col">
                   <a href="sortAlgorithm.html" class="nav-link">
                     <div class="card card-cover h-100 overflow-hidden bg-light
-                      text-white rounded-4 shadow-lg">
-                      <img src="images/sorting-alg-vis.png" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Sort Algorithm Visualizer</h5>
-                        <p class="card-text">This project was a way to visualize the sorting algorithms in Java. Also learning how to use JavaFX.</p>
-                      </div>
+                    text-white rounded-4 shadow-lg">
+                    <img src="images/sorting-alg-vis.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Sort Algorithm Visualizer</h5>
+                      <p class="card-text">This project was a way to visualize the sorting algorithms in Java. Also learning how to use JavaFX.</p>
                     </div>
-                  </a>
-                </div>
+                  </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
+      <section id="ending">
+        <div class="contaienr">
+          <footer class="d-flex flex-wrap justify-content align-items-center py-3 my-3 border-top">
+            <div class="col md-4 d-flex align-items-center">
+              <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                <img src="images/linux-terminal.png" alt="" width="25" height="30">
+              </a>
+              <span class="mb-3 mb-md-0 text-muted">Copyright&#169;2022 </span>
+              <span class="mb-3 mb-md-0 px-3 text-muted d-md-block d-sm-none"> All rights reserved.</span>
+            </div>
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+              <li class="ms-3"><a class="text-muted" href="http://github.com/TomasGlavina">
+                <i class="fa-brands fa-github fa-2x"></i>
+              </a>
+            </li>
+            <li class="ms-3"><a class="text-muted" href="https://www.linkedin.com/in/tomas-glavina-18a8a11aa/">
+                <i class="fa-brands fa-linkedin fa-2x"></i>
+              </a>
+            </li>
+            <li class="ms-3"><a class="text-muted" href="https://www.instagram.com/tomiglavina/">
+                <i class="fa-brands fa-instagram fa-2x"></i>
+              </a>
+            </li>
+            </div>
+          </footer>
+        </div>
+      </section>
+    </div>
 
         <!-- JavaScript Bundle with Popper -->
         <script
