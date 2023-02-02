@@ -22,6 +22,27 @@
       crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init('x08SGiDfe4KcmXejL');
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
     <script src="index.js"></script>
   </head>
 
@@ -351,12 +372,11 @@
                   </div>
               </div>
               <!--Grid row-->
-
+              <div class="d-flex m-3 justify-content-center ">
+                <input class="btn btn-outline-primary ps-4 pe-4 flex" type="submit" value="Send">
+              </div>
           </form>
 
-          <div class="text-center text-md-left m-3">
-            <a class="btn btn-primary ps-3 pe-3 p-2">Send</a>
-          </div>
           <div class="status"></div>
       </div>
       <!--Grid column-->
