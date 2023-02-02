@@ -27,22 +27,6 @@
         emailjs.init('x08SGiDfe4KcmXejL');
       })();
     </script>
-    <script type="text/javascript">
-      window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                // generate a five digit number for the contact_number variable
-                this.contact_number.value = Math.random() * 100000 | 0;
-                // these IDs from the previous steps
-                emailjs.sendForm('contact_service', 'contact_form', this)
-                    .then(function() {
-                        console.log('SUCCESS!');
-                    }, function(error) {
-                        console.log('FAILED...', error);
-                    });
-            });
-        }
-    </script>
     <script src="index.js"></script>
   </head>
 
@@ -307,106 +291,36 @@
           </div>
         </div>
       </section>
-      <section class="container-fluid justify-content-end bg-dark text-secondary
-      px-4 py-5" id="home">
-      <!--Section: Contact v.2-->
-<section class=" container mb-4 text-bg-dark" id="contact">
 
-  <!--Section heading-->
-  <h2 class="h1-responsive font-weight-bold text-start my-4">Contact me!</h2>
-  <!--Section description-->
-  <p class="text-start w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact me directly. I'll answer in a matter of minutes!w</p>
-
-  <div class="row">
-
-      <!--Grid column-->
-      <div class="col-md-9 mb-md-0 mb-5">
-          <form id="contact-form" name="contact-form" action="https://formspree.io/tomi.glavina@gmail.com">
-
-              <!--Grid row-->
-              <div class="row">
-
-                  <!--Grid column-->
-                  <div class="col-md-6">
-                      <div class="md-form mb-0">
-                        <label for="name" class="">Your name</label>
-                          <input type="text" id="name" name="name" class="form-control">
-                      </div>
-                  </div>
-                  <!--Grid column-->
-
-                  <!--Grid column-->
-                  <div class="col-md-6">
-                      <div class="md-form mb-0">
-                        <label for="email" class="">Your email</label>
-                          <input type="text" id="email" name="email" class="form-control">
-                      </div>
-                  </div>
-                  <!--Grid column-->
-
+      <section id="contact">
+        <div class="container p-5">
+          <h1 class="pb-1 text-danger text-center
+          text-decoration-underline">Contacts</h1>
+          <div class="row row-cols-1 row-cols-md-3 py-5">
+            <div class="col d-flex justify-content-center">
+              <div class="d-flex flex-column">
+              <i class="fa-solid fa-location-pin"></i>
+              <p>Tampere, 33230, Finland</p>
+            </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+              <div class="d-flex flex-column ">
+              <i class="fa-solid fa-phone"></i>
+              <p>+354401744114</p>
+            </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+              <div class="d-flex flex-column">
+                <i class="fa-solid fa-envelope"></i>
+                <p>tomi.glavina@gmail.com</p>
               </div>
-              <!--Grid row-->
-
-              <!--Grid row-->
-              <div class="row">
-                  <div class="col-md-12">
-                      <div class="md-form mb-0">
-                        <label for="subject" class="">Subject</label>
-                          <input type="text" id="subject" name="subject" class="form-control">
-                      </div>
-                  </div>
-              </div>
-              <!--Grid row-->
-
-              <!--Grid row-->
-              <div class="row">
-
-                  <!--Grid column-->
-                  <div class="col-md-12">
-
-                      <div class="md-form">
-                        <label for="message">Your message</label>
-                          <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                      </div>
-
-                  </div>
-              </div>
-              <!--Grid row-->
-              <div class="d-flex m-3 justify-content-center ">
-                <input class="btn btn-outline-primary ps-4 pe-4 flex" type="submit" value="Send">
-              </div>
-          </form>
-
-          <div class="status"></div>
-      </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
-      <div class="col-md-3 text-center">
-          <ul class="list-unstyled mb-0 p-3" >
-              <li><i class="fas fa-map-marker-alt fa-2x"></i>
-                  <p>Tampere, 33230, Finland</p>
-              </li>
-
-              <li><i class="fas fa-phone mt-4 fa-2x"></i>
-                  <p>+354 40 1744114</p>
-              </li>
-
-              <li><i class="fas fa-envelope mt-4 fa-2x"></i>
-                  <p>tomi.galvina@gmail.com</p>
-              </li>
-          </ul>
-      </div>
-      <!--Grid column-->
-
-  </div>
-
-</section>
-<!--Section: Contact v.2-->
+            </div>
+          </div>
+        </div>
       </section>
-
+      
       <section id="ending">
-        <div class="contaienr">
+        <div class="container">
           <footer class="d-flex flex-wrap justify-content align-items-center py-3 my-3 border-top">
             <div class="col md-4 d-flex align-items-center">
               <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
@@ -415,19 +329,6 @@
               <span class="mb-3 mb-md-0 text-muted">Copyright&#169;2022 </span>
               <span class="mb-3 mb-md-0 px-3 text-muted d-md-block d-sm-none"> All rights reserved.</span>
             </div>
-            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-              <li class="ms-3"><a class="text-muted" href="http://github.com/TomasGlavina">
-                <i class="fa-brands fa-github fa-2x"></i>
-              </a>
-            </li>
-            <li class="ms-3"><a class="text-muted" href="https://www.linkedin.com/in/tomas-glavina-18a8a11aa/">
-                <i class="fa-brands fa-linkedin fa-2x"></i>
-              </a>
-            </li>
-            <li class="ms-3"><a class="text-muted" href="https://www.instagram.com/tomiglavina/">
-                <i class="fa-brands fa-instagram fa-2x"></i>
-              </a>
-            </li>
             </div>
           </footer>
         </div>
