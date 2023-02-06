@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap"); /*!
- * Bootstrap  v5.2.2 (https://getbootstrap.com/)
+ * Bootstrap  v5.2.3 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -5887,7 +5887,6 @@ textarea.form-control-lg {
   display: block;
 }
 
-/* rtl:begin:ignore */
 .carousel-item-next:not(.carousel-item-start),
 .active.carousel-item-end {
   transform: translateX(100%);
@@ -5898,7 +5897,6 @@ textarea.form-control-lg {
   transform: translateX(-100%);
 }
 
-/* rtl:end:ignore */
 .carousel-fade .carousel-item {
   opacity: 0;
   transition-property: opacity;
@@ -11022,7 +11020,7 @@ header img { /* safari 6.0 - 9.0 */
   }
   .about-me-img {
     height: 450px;
-    width: 400px;
+    width: 500px;
   }
   #gameboys {
     width: 200px;
@@ -11047,5 +11045,14 @@ header img { /* safari 6.0 - 9.0 */
   li img {
     width: 24px;
     height: 24px;
+  }
+  .me-img {
+    width: 40%;
+  }
+  #second-about-text {
+    margin-right: 6rem;
+  }
+  #first-about-text {
+    margin-right: 10rem;
   }
 }/*# sourceMappingURL=main.css.map */
