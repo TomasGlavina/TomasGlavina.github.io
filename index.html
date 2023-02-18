@@ -14,6 +14,10 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;800&display=swap"
       rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,opsz,wght@0,8..30,400;0,8..30,700;1,8..30,500;1,8..30,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     <!-- CSS only -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
@@ -27,9 +31,9 @@
   <body>
     <header class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
       <nav class="container-xxl">
-        <a href="#home" class="navbar-brand d-flex" aria-label="Tomas Glavina">
-          <img src="images/linux-terminal.png" alt="" width="35" height="40">
-          <h1 class="fs-2">&nbsp;Tomas Glavina</h1>
+        <a href="#home" class="navbar-brand d-flex align-items-end" aria-label="Tomas Glavina">
+          <img src="images/linux-terminal.png" alt="" width="42">
+          <h1 class="fs-4 ">&nbsp;Tomas Glavina</h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
           data-bs-target="#bdNavbar"
@@ -63,7 +67,7 @@
             </li>
             <li class="nav-item col-6 col-lg-auto"> <a class="nav-link py-2 px-0
                 px-lg-2"
-                href="https://www.linkedin.com/in/tomas-glavina-18a8a11aa/" target="_blank">
+                href="https://www.linkedin.com/in/tomas-glavina-18a8a11aa/"B target="_blank">
                 <i class="fa-brands fa-linkedin fa-2x"></i>
                 <small class="d-lg-none ms-1 fs-6">LinkedIn</small>
               </a>
@@ -89,16 +93,17 @@
       <section class="container-fluid justify-content-end bg-dark text-secondary
       px-4 py-5" id="home">
       <div class="container py-5">
-        <div class="row flex-lg-row align-items-center g-5 py-5">
+        <div class="row flex-lg-row align-items-center justify-content-center g-5 py-5">
           <div class="col-lg-6">
-            <h2 class="col-md-8 fs-2">Ciao, I am </h2>
-            <h1 class="display-1 fw-bold lh-1 mb-3 text-primary"
+            <h2 class="col-md-8 fs-2 text-danger">Ciao, I am </h2>
+            <h1 class="display-2 fw-bold lh-1 mb-3 text-primary"
               id="hero-title">Tomas Glavina</h1>
-            <p class="text-white">I'm an Argentinean-Italian Software
+            <p class="text-white">I'm an Italian Software
               Engineering student at TAMK in Tampere,
               Finland.</p>
-            <a role="button" class="btn btn-primary" href="./Glavina-Resume.pdf" target="_blank">
-              My résumé
+            <a role="button" class="btn btn-outline-primary shadow-lg" href="./Glavina_CV.pdf" target="_blank">
+            
+             <h2 class="fs-6 m-0 p-1" > My résumé</h2>
             </a>
           </div>
           <div class="col-10 col-sm-8 col-lg-6 d-flex justify-content-center">
@@ -107,56 +112,48 @@
               alt="Home Image of me and my dog." loading="lazy" />
           </div>
         </div>
-        <div id="callToAction" class="py-3 container justify-content-center">
-          <p class="fs-5 mb-4 text-center">Scroll Down ↓</p>
-        </div>
       </section>
       <section class="bg-dark px-4 py-5" id="about-me">
         <div class="container">
-          <h1 class="pb-2 display-4 text-primary text-decoration-underline
-            text-center ">About me</h1>
+          <h1 class="pb-2 content-title display-4 
+            border-bottom ">About me</h1>
 
-          <div class="row flex-lg-row align-items-center g3 py-4"
+          <div class="row flex-lg-row d-flex align-items-center justify-content-around g3 py-4"
             id="about-text">
-            <div class="row flex-lg-row flex-sm-column 
+            <div class="row flex-lg-row flex-md-row flex-sm-column 
             align-items-center" id="firs-about-text">
-            <div class="col-10 col-sm-6 col-lg-4 me-img ">
+            <div class="col-10 col-sm-4 col-md-6 col-lg-6 me-img ">
               <img class="d-block mx-lg-0 img-fluid about-me-img" src="images/IMG_20210918_184018_073.jpg" alt="me staring at the ocean">
               </div>
-              <div class="col-lg-6 col-md-6 col-sm-6 p-4">
-                <img id="fedora" src="images/fedora.png" alt="fedora linux logo">
-                <p class="mb-2 aboutme-text">
-                  Hi! I am <span class="text-success">Tomas Glavina</span>. I'm 26
-                  years old (90s kid!) and I'm from
-                  Buenos Aires, Argentina.
+              <div class="col-lg-6 col-md-6 col-sm-12 p-4">
+                <p class="mb-2 fs-6 aboutme-text">
+                  Hello! I am <span class="text-primary">Tomas Glavina</span> and I enjoy solving problems and creating things that live in 0s and 1s. 
                   <br>Currently, I am studying Software Engineering in <span
-                  class="text-success">Tampere
-                  University of Applied Sciences</span> where I will be
-                  a tutor for the new students next year, which I'm very excited
-                  about!<br>
-                  I finished my first year with a good 4,69/5 overall grade and I
-                  already completed a 3rd year course 'Operative
-                  Systems and Linux Programming', because I love Linux and I
-                  wanted to learn
-                  more about it and programming C in the command line.
+                  class="text-primary">Tampere
+                  University of Applied Sciences</span> where I am
+                  a tutor for the new students, which I'm loving so much!<br>
+                  I am a second year student with a 4.32/5 GPA and I
+                  already completed many 3rd year courses like 'Operative
+                  Systems and Linux Programming', 'AI and Machine Learning', 'GUI', and more! 
+                  <br>After this year I will have only 10 courses left, and I'm planning on finishing one year earlier.
                   
                 </p>
               </div>
             </div>
-              <div class="row flex-lg-row flex-sm-column-reverse flex-md-column-reverse flex-column-reverse
+              <div class="row flex-lg-row flex-sm-column-reverse flex-md-row flex-column-reverse
               align-items-center g-3" id="about-text-div">
-              <div class="col-lg-6 col-sm-6">
-                <p class="mb-4 aboutme-text" id="second-about-text">
+              <div class="col-lg-6 col-md-6 col-sm-12">
+                <p class="mb-4 fs-6 aboutme-text" id="second-about-text">
                   Besides school, I am also learning
-                  Full-Stack development with Django, Bash scripting and doing
-                  CTFs (usually Linux Forensics and Reverse Engineering). Also I
+                  <span class="text-primary">Spring</span> backend development, <span class="text-primary">Linux Administration and Bash scripting</span>, and doing
+                  CTFs for fun. Also I
                   am learning Data Structures and Algorithms, by reading
                   Introduction to Algorithms by Thomas H. Cormen and applying
                   them in Java.
                   <br>
-                  My hobbies are going on hikes with my wife and dog, reading
+                  My hobbies are going on hikes with my family, reading
                   (The Hobbit, best book ever), playing football
-                  (Let's go Ilves!), learning more about coding and spending
+                  , learning more about coding and spending
                   time with my friends.
                 </p>
               </div>
@@ -176,11 +173,52 @@
             <div class="col d-flex align-items-start">
               <i class="fa-brands fa-java fa-2xl"></i>
               <div class="ps-3">
-                <h4 class="fw-bold mb-0">Java</h4>
+                <h4 class="fw-bold mb-0">Java & Spring</h4>
                 <p>Core - OOP - Functional Programming - Dependency Injection -
-                  Var-Args - Packages </p>
+                  Var-Args - Packages - Security - Boot - Data</p>
                 </div>
             </div>
+            <div class="col d-flex align-items-start">
+              <i class="fa-solid fa-database fa-xl"></i>
+              <div class="ps-3">
+                <h4 class="fw-bold mb-0">Databases</h4>
+                <p>SQL: PostgreSQL, MySQL, AmazonRDS, SQLite
+                  <br>NoSQL: MongoDB, DynamoDB, Cassandra
+                </p>
+              </div>
+            </div>
+            <div class="col d-flex align-items-start">
+              <i class="fa-brands fa-react fa-xl"></i>
+              <div class="ps-3">
+                <h4 class="fw-bold mb-0">React</h4>
+                <p>JSX - State Management - Redux - -Router - NextJS - Jest </p>
+              </div>
+            </div>
+            <div class="col d-flex align-items-start">
+              <i class="fa-brands fa-js-square fa-2xl"></i>
+              <div class="ps-3">
+                <h4 class="fw-bold mb-0">TypeScript + NodeJS</h4>
+                <p>Type annotations - Generics - Classes - Interfaces - Server handling - Event Driven Architecture - Modules - Express - Debugging</p>
+              </div>
+            </div>
+            <div class="col d-flex align-items-start">
+              <i class="fa-brands fa-linux fa-2xl"></i>
+              <div class="ps-3">
+                <h4 class="fw-bold mb-0">Linux</h4>
+                <p>Command-Line Tools (grep, sed, awk, find, etc) - Networking - File Systems (ext4, btrfs) - Bash and Python Scripting -
+                  Vim - Package Management (APT, DNF and Pacman) - Processes - System Administration -
+                  SSH </p>
+              </div>
+            </div>
+            
+            <div class="col d-flex align-items-start">
+              <i class="fa-brands fa-aws fa-2xl"></i>
+              <div class="ps-3">
+                <h4 class="fw-bold mb-0">Amazon Web Services</h4>
+                <p>EC2 - S3 - RDS - Console - CLI - IAM - Lambda - Databases</p>
+              </div>
+            </div>
+
             <div class="col d-flex align-items-start">
               <i class="fa-solid fa-terminal fa-xl"></i>
               <div class="ps-3">
@@ -192,54 +230,22 @@
               </div>
             </div>
             <div class="col d-flex align-items-start">
-              <i class="fa-brands fa-linux fa-2xl"></i>
-              <div class="ps-3">
-                <h4 class="fw-bold mb-0">Linux</h4>
-                <p>My daily driver (Fedora) - File Systems - Bash Scripting -
-                  Vim - Package Management (APT, DNF and Pacman) - Processes -
-                  SSH </p>
-              </div>
-            </div>
-            <div class="col d-flex align-items-start">
               <i class="fa-solid fa-code-branch fa-2xl"></i>
               <div class="ps-3">
                 <h4 class="fw-bold mb-0">Git</h4>
                 <p>Core skills: Pull, commits, rebase, merge, branches</p>
               </div>
             </div>
-            <div class="col d-flex align-items-start">
-              <i class="fa-solid fa-code fa-xl"></i>
-              <div class="ps-3">
-                <h4 class="fw-bold mb-0">HTML & CSS</h4>
-                <p>HTML: Core HTML Tags - Semantic Syntax <br>
-                  CSS: Basics - Transformation - Transitions - Responsive
-                  Layouts - SASS - Bootstrap</p>
-              </div>
-            </div>
-            <div class="col d-flex align-items-start">
-              <i class="fa-brands fa-js-square fa-2xl"></i>
-              <div class="ps-3">
-                <h4 class="fw-bold mb-0">JavaScript + NodeJS</h4>
-                <p>Core Coding - OOP - Dom Manipulation - Server handling -
-                  Learning React </p>
-              </div>
-            </div>
-            <div class="col d-flex align-items-start">
-              <i class="fa-brands fa-python fa-2xl"></i>
-              <div class="ps-3">
-                <h4 class="fw-bold mb-0">Python + Django</h4>
-                <p>Core Python - OOP - CTF decoding </p>
-              </div>
-            </div>
+            
           </div>
+            
         </section>
         <section class="bg-dark" id="projects">
           <div class="container">
-            <h1 class="pb-2 display-4 text-primary text-center
-            text-decoration-underline">Projects</h1>
+            <h1 class="pb-2 display-4 content-title  border-bottom" id="projects-title">Projects</h1>
             
             <div class="container ">
-              <a href="https://github.com/TomasGlavina" class="btn btn-outline-primary" target="_blank">See more in Github!</a>
+              <a href="https://github.com/TomasGlavina" class="btn btn-outline-primary shadow-lg" target="_blank"><h2 class="fs-6 m-0 p-1">See more in Github!</h2></a>
               <div class=" row row-cols-1 row-cols-md-1 row-cols-lg-3 g-4 py-2 text-dark">
                 <div class="col d-flex align-items-stretch">
                   <a href="hotelApp.html" class="nav-link">
@@ -292,8 +298,7 @@
 
       <section id="contact">
         <div class="container p-5">
-          <h1 class="pb-1 text-danger text-center
-          text-decoration-underline">Contacts</h1>
+          <h1 class="pb-1 content-title text-center">Contacts</h1>
           <div class="row row-cols-1 row-cols-md-3 py-5">
             <div class="col d-flex justify-content-center">
               <div class="d-flex flex-column">
