@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faJava, faReact, faJsSquare, faAws, faGitAlt, faLinux } from '@fortawesome/free-brands-svg-icons';
-import { faDatabase, faCode } from '@fortawesome/free-solid-svg-icons';
+import { faDatabase } from '@fortawesome/free-solid-svg-icons';
 
 type SkillProps = {
     icon: any;
