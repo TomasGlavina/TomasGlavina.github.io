@@ -1,24 +1,48 @@
-import meInca from '../assets/images/me-inca.jpeg';
+import SectionTitle from "@/components/Title";
+import meInca from "../assets/me-draw.jpg";
+import { Button } from "@/components/ui/button";
 
-const Home = () => {
-    return (
-        <>
-        <div className='flex flex-col justify-evenly items-center md:flex-row md:justify-between'>
-            <div className='text-start pr-32'>
-                <h1 className='text-3xl'>Hola,</h1>
-                <h1 className='flex items-end text-6xl whitespace-nowrap'>
-                    I am
-                    <span className='pl-3 text-6xl text-mauve'>Tomás</span>
-                </h1>
-                <h3>Software Engineering Student</h3>
-                <p className='py-5'>I am an Italian-Argentine Software Engineering student at TAMK in Tampere, Finland</p>
-            </div>
-            <div>
-                <img className='max-w-sm h-auto rounded-full sm:max-w-xs' src={meInca} alt="Me and Inca" />
-            </div>
+export default function Home({ onOpenAbout }: { onOpenAbout?: () => void }) {
+  return (
+    <section id="home" className="scroll-mt-24">
+      <SectionTitle emoji="◝(ᵔᗜᵔ)◜">hola</SectionTitle>
+      {/* Left: text */}
+      <div className="content flex flex-col md:flex-row items-center md:items-start gap-4">
+        <div className="">
+          <img
+            src={meInca}
+            alt="Me and Inca"
+            className="h-40 w-40 rounded-full object-cover ring-4 ring-ctp-mauve md:h-48 md:w-48"
+          />
         </div>
-        </>
-    );
-};
-
-export default Home;
+        <div className="flex-1 ">
+          <h2 className="mt-1 font-semibold text-3xl md:text-5xl">
+            i am <span className="text-ctp-mauve">tomás</span>
+          </h2>
+          <h3 className="text-xl ">software engineer</h3>
+          <p className="mt-4 text-ctp-subtext0">
+            if it runs in a terminal, i’ll probably love it — from tmux sessions
+            to backend servers. i build systems that work hard behind the
+            scenes, and sometimes obsess over the pixels up front too.
+          </p>
+          <a href="/cv.pdf" download="Tomas_Glavina_CV.pdf">
+            <Button className="bg-ctp-mauve text-lg my-4 text-slate-800 hover:text-ctp-text">
+              Get my CV!
+            </Button>
+          </a>
+          <Button
+            type="button"
+            onClick={() => {
+              console.log("Home: Read more clicked");
+              onOpenAbout?.();
+              console.log(onOpenAbout);
+            }}
+            className="bg-ctp-mauve text-lg my-4 text-slate-800 hover:text-ctp-text lg:ml-4"
+          >
+            Read more about me
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+}
