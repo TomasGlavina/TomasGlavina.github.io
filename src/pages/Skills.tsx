@@ -3,9 +3,11 @@ import SkillsGrid from "../components/Skill";
 
 export default function Skills() {
   return (
-    <section className="" id="skills">
+    <section className="tile" id="skills">
       <SectionTitle emoji="🛠️">skills</SectionTitle>
-      <SkillsGrid />
+      <div className="content">
+        <SkillsGrid />
+      </div>
     </section>
   );
 }

@@ -1,8 +1,6 @@
-const catppuccin = require("@catppuccin/tailwindcss");
-
 module.exports = {
-  darkMode: ["class", "class"],
-  content: ["./index.html", "./src/**/*.{ts,tsx, md, mdx}"],
+  darkMode: ["class"],
+  content: ["./index.html", "./src/**/*.{ts,tsx,md,mdx}"],
   theme: {
     extend: {
       borderRadius: {
@@ -51,14 +49,28 @@ module.exports = {
           4: "hsl(var(--chart-4))",
           5: "hsl(var(--chart-5))",
         },
+        ctp: {
+          base: "#282828",
+          mantle: "#1d2021",
+          crust: "#141617",
+          green: "#b8bb26",
+          blue: "#458588",
+          surface0: "#3c3836",
+          surface1: "#504945",
+          surface2: "#665c54",
+          overlay0: "#7c6f64",
+          overlay1: "#928374",
+          overlay2: "#a89984",
+          text: "#ebdbb2",
+          subtext0: "#d5c4a1",
+          subtext1: "#bdae93",
+          mauve: "#b8bb26",
+          red: "#cc241d",
+        },
       },
     },
   },
   plugins: [
-    catppuccin({
-      prefix: "ctp",
-      defaultFlavour: "mocha", // 👈 force Catppuccin Mocha everywhere
-    }),
     require("@tailwindcss/typography"),
     require("tailwindcss-animate"),
   ],

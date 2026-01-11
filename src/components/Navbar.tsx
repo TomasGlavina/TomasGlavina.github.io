@@ -1,7 +1,9 @@
+import type { MouseEvent } from "react";
+
 const link = "px-4 py-2 rounded-md text-lg font-medium transition-colors";
 const idle = "text-ctp-subtext0 hover:bg-ctp-surface0 hover:text-ctp-text";
 
-function smoothScroll(e: React.MouseEvent<HTMLAnchorElement>) {
+function smoothScroll(e: MouseEvent<HTMLAnchorElement>) {
   const href = (e.currentTarget.getAttribute("href") || "").trim();
   if (href.startsWith("#")) {
     e.preventDefault();
@@ -11,9 +13,22 @@ function smoothScroll(e: React.MouseEvent<HTMLAnchorElement>) {
   }
 }
 
-export default function Navbar() {
+export default function Navbar({
+  onOpenAbout,
+}: {
+  onOpenAbout?: () => void;
+}) {
+  function handleAboutClick(e: MouseEvent<HTMLAnchorElement>) {
+    if (onOpenAbout) {
+      e.preventDefault();
+      onOpenAbout();
+      return;
+    }
+    smoothScroll(e);
+  }
+
   return (
-    <nav className="fixed inset-x-0 top-0 z-50 h-16 bg-ctp-mantle/80 backdrop-blur ">
+    <nav className="fixed inset-x-0 top-0 z-50 h-16 border-b border-ctp-overlay0 bg-ctp-base/90 backdrop-blur">
       <div className="mx-auto max-w-[90rem] px-6">
         <div className="h-16 flex items-center justify-between">
           <a
@@ -27,7 +42,7 @@ export default function Navbar() {
           <div className="flex">
             <a
               href="#about"
-              onClick={smoothScroll}
+              onClick={handleAboutClick}
               className={`${link} ${idle}`}
             >
               About

@@ -16,15 +16,15 @@ export default function Interests() {
     { src: ojosama, alt: "ojosama, its time to go to bed" },
   ];
   return (
-    <section id="interests" className="scroll-mt-24">
+    <section id="interests" className="tile scroll-mt-24">
       <SectionTitle emoji="🎯">random</SectionTitle>
-      <div className="content flex flex-wrap gap-2 items-center justify-evenly">
+      <div className="content grid grid-cols-3 grid-rows-2 gap-2 p-2 overflow-hidden">
         {items.map((item, index) => (
           <img
             key={index}
             src={item.src}
             alt={item.alt}
-            className="h-20 rounded-lg object-contain"
+            className="h-full w-full rounded-md object-cover"
           />
         ))}
       </div>

@@ -4,12 +4,11 @@ import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import {
   faJava,
   faLinux,
-  faAws,
   faGitAlt,
   faReact,
   faJsSquare,
 } from "@fortawesome/free-brands-svg-icons";
-import { faCubes, faDatabase, faStar } from "@fortawesome/free-solid-svg-icons";
+import { faDatabase, faStar } from "@fortawesome/free-solid-svg-icons";
 
 /**
  * Sidebar skills list
@@ -82,19 +81,21 @@ export default function SkillsGrid() {
             <FontAwesomeIcon
               icon={faStar}
               className="shrink-0 opacity-80"
-              size="xl"
+              size="lg"
             />
             &nbsp;
-            <h2 className="text-ctp-mauve font-semibold tracking-tight">
+            <h2 className="text-sm text-ctp-green font-semibold tracking-tight md:text-base">
               core stack {">>"}
             </h2>
           </span>
-          <p className="ml-2 text-sm text-ctp-text">{CORE_STACK.join(", ")}</p>
+          <p className="ml-2 text-xs text-ctp-text md:text-sm">
+            {CORE_STACK.join(", ")}
+          </p>
         </div>
       </div>
 
       {/* other sections */}
-      <nav className="rounded-sm border border-ctp-surface0 backdrop-blur divide-y divide-neutral-800/80">
+      <nav className="rounded-sm border border-ctp-surface0 backdrop-blur divide-y divide-ctp-overlay0/70">
         {SECTIONS.map((s) => {
           const open = openKey === s.key;
           return (
@@ -103,21 +104,21 @@ export default function SkillsGrid() {
                 id={`btn-${s.key}`}
                 aria-expanded={open}
                 onClick={() => toggle(s.key)}
-                className="group w-full flex items-center px-3 py-2.5 text-left hover:bg-ctp-mauve hover:text-ctp-crust focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/40"
+                className="group w-full flex items-center px-3 py-2.5 text-left text-sm hover:bg-ctp-green hover:text-ctp-crust focus:outline-none focus-visible:ring-2 focus-visible:ring-ctp-green/50"
               >
-                <span className="text-base font-medium ">
+                <span className="font-medium">
                   {s.icon && (
                     <FontAwesomeIcon
                       icon={s.icon}
                       className="shrink-0 opacity-80"
-                      size="xl"
+                      size="lg"
                     />
                   )}{" "}
                   {s.title}
                   {" >> "}
                 </span>
                 {open && (
-                  <span className="ml-2 flex items-center gap-2 text-sm ">
+                  <span className="ml-2 flex items-center gap-2 text-xs md:text-sm">
                     {s.body}
                   </span>
                 )}
