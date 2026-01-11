@@ -3,8 +3,8 @@ import meInca from "../assets/me-draw.jpg";
 
 export default function Home({ onOpenAbout }: { onOpenAbout?: () => void }) {
   return (
-    <section id="home" className="tile scroll-mt-24 bg-ctp-base">
-      <SectionTitle emoji="◝(ᵔᗜᵔ)◜">hola</SectionTitle>
+    <section id="home" className="tile scroll-mt-24">
+      <SectionTitle emoji="">cat hola</SectionTitle>
       {/* Left: text */}
       <div className="content flex flex-col md:flex-row items-center md:items-start gap-4">
         <div className="">

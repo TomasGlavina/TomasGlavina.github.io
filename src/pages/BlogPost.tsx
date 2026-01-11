@@ -8,7 +8,7 @@ export default function BlogPost() {
   if (!post) {
     return (
       <div className="min-h-screen w-full bg-ctp-mantle text-ctp-text">
-        <main className="mx-auto max-w-3xl px-6 py-12">
+        <main className="mt-9 w-full px-1 pb-6">
           <p className="text-sm text-ctp-subtext0">Post not found.</p>
           <div className="mt-4 flex gap-3 text-xs font-semibold tracking-wide">
             <Link to="/" className="text-ctp-green hover:text-ctp-text">
@@ -30,7 +30,7 @@ export default function BlogPost() {
 
   return (
     <div className="min-h-screen w-full bg-ctp-mantle text-ctp-text">
-      <main className="mx-auto max-w-3xl px-6 py-8 md:py-12">
+      <main className="mt-9 w-full px-1 pb-3">
         <header className="mb-6 flex flex-wrap items-center justify-between gap-4">
           <div className="flex items-center gap-3 text-xs font-semibold tracking-wide">
             <Link to="/" className="text-ctp-green hover:text-ctp-text">

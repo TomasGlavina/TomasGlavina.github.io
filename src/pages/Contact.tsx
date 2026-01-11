@@ -1,71 +1,49 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import {
-  faLinkedin,
-  faGithub,
-} from "@fortawesome/free-brands-svg-icons";
 import SectionTitle, { SectionTitleClose } from "@/components/Title";
-
-type ContactInfoProps = {
-  icon: IconDefinition;
-  name: string;
-  url: string;
-  onClick?: () => void;
-};
-
-const ContactInfo = ({
-  icon,
-  name,
-  url,
-  onClick,
-}: ContactInfoProps) => (
-  <div className="flex items-center space-x-2">
-    <FontAwesomeIcon icon={icon} />
-    {onClick ? (
-      <button
-        type="button"
-        onClick={onClick}
-        className="text-ctp-green hover:text-ctp-text transition duration-150 ease-in-out"
-      >
-        {name}
-      </button>
-    ) : (
-      <a
-        href={url}
-        className="text-ctp-green hover:text-ctp-text transition duration-150 ease-in-out"
-      >
-        {name}
-      </a>
-    )}
-  </div>
-);
 
 export default function Contact({ onOpen }: { onOpen?: () => void }) {
   return (
     <section id="contact" className="tile scroll-mt-24">
-      <SectionTitle emoji="✉️" onOpen={onOpen}>
-        contact
+      <SectionTitle emoji="" onOpen={onOpen}>
+        cat contact.json
       </SectionTitle>
       <div className="content">
-        <ContactInfo
-          icon={faEnvelope}
-          name="email"
-          url="mailto:tomaslglavina@gmail.com"
-          onClick={onOpen}
-        />
-        <ContactInfo
-          icon={faGithub}
-          name="github"
-          url="https://github.com/tomasglavina"
-        />
-        <ContactInfo
-          icon={faLinkedin}
-          name="linkedin"
-          url="https://www.linkedin.com/in/tomasglavina/"
-        />
-
-        <p>city: tampere, finland</p>
+        <div className="font-mono text-xs text-ctp-subtext0">
+          <div>{"{"}</div>
+          <div className="pl-2 py-2">
+            <span className="text-ctp-green">"email"</span>:{" "}
+            <a
+              href="mailto:tomaslglavina@gmail.com"
+              className="text-ctp-text hover:text-ctp-green"
+            >
+              "tomaslglavina@gmail.com"
+            </a>
+            ,
+          </div>
+          <div className="pl-2 pb-2">
+            <span className="text-ctp-green">"github"</span>:{" "}
+            <a
+              href="https://github.com/tomasglavina"
+              className="text-ctp-text hover:text-ctp-green"
+            >
+              "github.com/tomasglavina"
+            </a>
+            ,
+          </div>
+          <div className="pl-2 pb-2">
+            <span className="text-ctp-green">"linkedin"</span>:{" "}
+            <a
+              href="https://www.linkedin.com/in/tomasglavina/"
+              className="text-ctp-text hover:text-ctp-green"
+            >
+              "linkedin.com/in/tomasglavina"
+            </a>
+            ,
+          </div>
+          <div className="pl-2 pb-2">
+            <span className="text-ctp-green">"city"</span>: "tampere, finland",
+          </div>
+          <div>{"}"}</div>
+        </div>
       </div>
     </section>
   );
@@ -75,7 +53,7 @@ export function ContactModal({ onClose }: { onClose: () => void }) {
   return (
     <div className="p-4">
       <SectionTitleClose emoji="✉️" onClose={onClose}>
-        contact
+        cat contact.json
       </SectionTitleClose>
       <div className="content">
         <form
@@ -83,7 +61,7 @@ export function ContactModal({ onClose }: { onClose: () => void }) {
           onSubmit={(event) => event.preventDefault()}
         >
           <div className="flex flex-col gap-2">
-            <label htmlFor="name" className="text-xs uppercase tracking-wide">
+            <label htmlFor="name" className="text-xs tracking-wide">
               name
             </label>
             <input
@@ -94,7 +72,7 @@ export function ContactModal({ onClose }: { onClose: () => void }) {
             />
           </div>
           <div className="flex flex-col gap-2">
-            <label htmlFor="email" className="text-xs uppercase tracking-wide">
+            <label htmlFor="email" className="text-xs tracking-wide">
               email
             </label>
             <input
@@ -105,10 +83,7 @@ export function ContactModal({ onClose }: { onClose: () => void }) {
             />
           </div>
           <div className="flex flex-col gap-2">
-            <label
-              htmlFor="message"
-              className="text-xs uppercase tracking-wide"
-            >
+            <label htmlFor="message" className="text-xs tracking-wide">
               message
             </label>
             <textarea
@@ -120,7 +95,7 @@ export function ContactModal({ onClose }: { onClose: () => void }) {
           </div>
           <button
             type="submit"
-            className="rounded-md bg-ctp-green px-4 py-2 text-sm font-semibold uppercase tracking-wide text-ctp-crust hover:bg-ctp-green/90"
+            className="rounded-md bg-ctp-green px-4 py-2 text-sm font-semibold tracking-wide text-ctp-crust hover:bg-ctp-green/90"
           >
             send
           </button>

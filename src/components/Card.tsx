@@ -22,7 +22,7 @@ const Card: React.FC<CardProps> = ({
 }) => (
   <div
     className={cn(
-      "bg-ctp-surface0 border border-ctp-surface2 shadow-md rounded-md overflow-hidden",
+      "bg-ctp-surface0 border border-ctp-surface2 rounded-[4px] overflow-hidden",
       className
     )}
   >

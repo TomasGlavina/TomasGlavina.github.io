@@ -1,69 +1,40 @@
-import type { MouseEvent } from "react";
+import { useEffect, useState } from "react";
 
-const link = "px-4 py-2 rounded-md text-lg font-medium transition-colors";
-const idle = "text-ctp-subtext0 hover:bg-ctp-surface0 hover:text-ctp-text";
-
-function smoothScroll(e: MouseEvent<HTMLAnchorElement>) {
-  const href = (e.currentTarget.getAttribute("href") || "").trim();
-  if (href.startsWith("#")) {
-    e.preventDefault();
-    const el = document.querySelector(href);
-    el?.scrollIntoView({ behavior: "smooth", block: "start" });
-    history.replaceState(null, "", href);
-  }
+function formatTimestamp(date: Date) {
+  const pad = (value: number) => value.toString().padStart(2, "0");
+  const yyyy = date.getFullYear();
+  const mm = pad(date.getMonth() + 1);
+  const dd = pad(date.getDate());
+  const hh = pad(date.getHours());
+  const min = pad(date.getMinutes());
+  return `${yyyy}-${mm}-${dd} ${hh}:${min}`;
 }
 
-export default function Navbar({
-  onOpenAbout,
-}: {
-  onOpenAbout?: () => void;
-}) {
-  function handleAboutClick(e: MouseEvent<HTMLAnchorElement>) {
-    if (onOpenAbout) {
-      e.preventDefault();
-      onOpenAbout();
-      return;
-    }
-    smoothScroll(e);
-  }
+export default function Navbar() {
+  const [now, setNow] = useState(() => new Date());
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setNow(new Date());
+    }, 60 * 1000);
+    return () => window.clearInterval(interval);
+  }, []);
 
   return (
-    <nav className="fixed inset-x-0 top-0 z-50 h-16 border-b border-ctp-overlay0 bg-ctp-base/90 backdrop-blur">
-      <div className="mx-auto max-w-[90rem] px-6">
-        <div className="h-16 flex items-center justify-between">
-          <a
-            href="#home"
-            onClick={smoothScroll}
-            className="text-xl font-semibold text-ctp-text"
-          >
-            Tomas Glavina
-          </a>
-
-          <div className="flex">
-            <a
-              href="#about"
-              onClick={handleAboutClick}
-              className={`${link} ${idle}`}
-            >
-              About
-            </a>
-            <a
-              href="#projects"
-              onClick={smoothScroll}
-              className={`${link} ${idle}`}
-            >
-              Projects
-            </a>
-            <a
-              href="#contact"
-              onClick={smoothScroll}
-              className={`${link} ${idle}`}
-            >
-              Contact
-            </a>
-          </div>
+    <header className="fixed inset-x-0 top-0 z-50 h-9 border-b border-ctp-overlay0 bg-ctp-base">
+      <div className="flex h-full items-center justify-between gap-3 px-2 text-sm font-medium text-ctp-subtext0">
+        <div className="flex items-center gap-3">
+          <span>
+            <span className="text-ctp-green">1</span> 2 3 4
+          </span>
+          <span className="text-ctp-text">~/tomasglavina/home</span>
+        </div>
+        <div className="flex items-center gap-3">
+          <span>layout:tiling</span>
+          <span>kbd:fi</span>
+          <span className="text-ctp-text">{formatTimestamp(now)}</span>
         </div>
       </div>
-    </nav>
+    </header>
   );
 }

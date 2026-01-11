@@ -1,67 +1,49 @@
-import Autoplay from "embla-carousel-autoplay";
-import hotelTN1 from "../assets/images/hotel-tn1.png";
-import sortVis from "../assets/images/sorting-alg-vis.png";
-import { useRef } from "react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import Card from "../components/Card.tsx";
 import SectionTitle, { SectionTitleClose } from "@/components/Title.tsx";
 
 const projects = [
   {
-    title: "sorting visualizer",
+    name: "sorting-visualizer",
     description: "algorithms in the browser.",
-    thumbnail: sortVis,
+    size: "4.0k",
+    updated: "sep 26",
   },
   {
-    title: "cli dotfiles",
+    name: "cli-dotfiles",
     description: "linux + tmux + nvim workflow.",
-    thumbnail: hotelTN1,
+    size: "8.0k",
+    updated: "aug 12",
   },
   // …add more
 ];
 
-export default function ProjectsCarousel({
-  onOpen,
-}: {
-  onOpen?: () => void;
-}) {
-  const autoplay = useRef(Autoplay({ delay: 4000, stopOnInteraction: true }));
-
+export default function ProjectsList({ onOpen }: { onOpen?: () => void }) {
+  const preview = projects.slice(0, 3);
   return (
     <section id="projects" className="tile scroll-mt-24">
-      <SectionTitle emoji="📂" onOpen={onOpen}>
-        projects
+      <SectionTitle emoji="" onOpen={onOpen}>
+        ll projects
       </SectionTitle>
-      <div className="content p-0 overflow-hidden">
-        <Carousel
-          className="group relative h-full w-full"
-          opts={{ align: "start", loop: true }}
-          plugins={[autoplay.current]}
-        >
-          <CarouselContent
-            className="h-full -ml-0 items-stretch"
-            containerClassName="h-full"
-          >
-            {projects.map((p) => (
-              <CarouselItem key={p.title} className="basis-full h-full pl-0">
-                <Card
-                  {...p}
-                  className="h-full rounded-none border-0 shadow-none flex flex-col"
-                  imageClassName="h-24 md:h-28 lg:h-32 flex-none"
-                  contentClassName="flex-1"
-                />
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="opacity-0 group-hover:opacity-100 transition-opacity left-3 top-auto bottom-3 translate-y-0" />
-          <CarouselNext className="opacity-0 group-hover:opacity-100 transition-opacity right-3 top-auto bottom-3 translate-y-0" />
-        </Carousel>
+      <div className="content">
+        <ul className="space-y-2 text-xs font-mono">
+          {preview.map((project) => (
+            <li
+              key={project.name}
+              className="rounded-md border border-ctp-overlay0 bg-ctp-surface0 px-3 py-2"
+            >
+              <div className="grid grid-cols-[auto,auto,auto,auto,auto,1fr] gap-2">
+                <span className="text-ctp-subtext1">drwxr-xr-x</span>
+                <span className="text-ctp-subtext0">tomas</span>
+                <span className="text-ctp-subtext0">dev</span>
+                <span className="text-ctp-subtext1">{project.size}</span>
+                <span className="text-ctp-subtext1">{project.updated}</span>
+                <span className="text-ctp-blue">{project.name}</span>
+              </div>
+              <p className="mt-1 text-[11px] text-ctp-subtext0">
+                // {project.description}
+              </p>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );
@@ -71,12 +53,29 @@ export function ProjectsModal({ onClose }: { onClose: () => void }) {
   return (
     <div className="p-4">
       <SectionTitleClose emoji="📂" onClose={onClose}>
-        projects
+        ll projects
       </SectionTitleClose>
-      <div className="content grid gap-4 md:grid-cols-2">
-        {projects.map((project) => (
-          <Card key={project.title} {...project} />
-        ))}
+      <div className="content">
+        <ul className="space-y-3 text-xs font-mono">
+          {projects.map((project) => (
+            <li
+              key={project.name}
+              className="rounded-md border border-ctp-overlay0 bg-ctp-surface0 px-3 py-2"
+            >
+              <div className="grid grid-cols-[auto,auto,auto,auto,auto,1fr] gap-2">
+                <span className="text-ctp-subtext1">drwxr-xr-x</span>
+                <span className="text-ctp-subtext0">tomas</span>
+                <span className="text-ctp-subtext0">dev</span>
+                <span className="text-ctp-subtext1">{project.size}</span>
+                <span className="text-ctp-subtext1">{project.updated}</span>
+                <span className="text-ctp-blue">{project.name}</span>
+              </div>
+              <p className="mt-1 text-[11px] text-ctp-subtext0">
+                // {project.description}
+              </p>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

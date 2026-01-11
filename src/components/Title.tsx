@@ -11,7 +11,7 @@ export default function SectionTitle({
 }) {
   return (
     <h2
-      className={`mb-2 flex w-full items-center justify-between gap-2 border-b border-ctp-overlay0 bg-ctp-surface1 px-3 py-2 text-xs font-semibold tracking-wide text-ctp-text md:text-sm${
+      className={`mb-1 flex w-full items-center justify-between gap-2 border-b border-ctp-overlay0 px-2 py-1 text-xs font-semibold tracking-wide text-ctp-text md:text-sm${
         onOpen ? " cursor-pointer" : ""
       }`}
       onClick={onOpen}
@@ -26,7 +26,8 @@ export default function SectionTitle({
       }}
     >
       <span className="flex items-center gap-2">
-        <span className="text-ctp-overlay2">{emoji}</span>
+        <span className="text-ctp-green">›</span>
+        {emoji ? <span className="text-ctp-overlay2">{emoji}</span> : null}
         <span>{children}</span>
       </span>
       {onOpen && (
@@ -55,9 +56,10 @@ export function SectionTitleClose({
   children: React.ReactNode;
 }) {
   return (
-    <h2 className="mb-2 flex w-full items-center justify-between gap-2 border-b border-ctp-overlay0 bg-ctp-surface1 px-3 py-2 text-xs font-semibold tracking-wide text-ctp-text md:text-sm">
+    <h2 className="mb-1 flex w-full items-center justify-between gap-2 border-b border-ctp-overlay0 px-2 py-1 text-xs font-semibold tracking-wide text-ctp-text md:text-sm">
       <span className="flex items-center gap-2">
-        <span className="text-ctp-overlay2">{emoji}</span>
+        <span className="text-ctp-green">›</span>
+        {emoji ? <span className="text-ctp-overlay2">{emoji}</span> : null}
         <span>{children}</span>
       </span>
       <button

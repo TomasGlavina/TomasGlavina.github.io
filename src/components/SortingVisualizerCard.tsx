@@ -2,7 +2,7 @@ import React from "react";
 
 const SortingVisualizerCard: React.FC = () => {
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg bg-ctp-surface0 m-4">
+    <div className="max-w-sm rounded-[4px] overflow-hidden bg-ctp-surface0 m-4 border border-ctp-overlay0">
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">
           Sorting Algorithm Visualizer

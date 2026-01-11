@@ -18,10 +18,10 @@ export default function BlogIndex() {
 
   return (
     <div className="min-h-screen w-full bg-ctp-mantle text-ctp-text">
-      <main className="mx-auto max-w-4xl px-6 py-8 md:py-12">
+      <main className="mt-9 w-full px-1 pb-3">
         <header className="mb-6 flex flex-wrap items-center justify-between gap-4">
           <div>
-            <h1 className="text-2xl font-semibold">blog</h1>
+            <h1 className="text-2xl font-semibold">ll blog</h1>
             <p className="mt-2 text-sm text-ctp-subtext0">
               notes, experiments, and tiny writeups.
             </p>

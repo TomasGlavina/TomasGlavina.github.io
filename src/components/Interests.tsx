@@ -17,7 +17,7 @@ export default function Interests() {
   ];
   return (
     <section id="interests" className="tile scroll-mt-24">
-      <SectionTitle emoji="🎯">random</SectionTitle>
+      <SectionTitle emoji="">python random_interests.py</SectionTitle>
       <div className="content grid grid-cols-3 grid-rows-2 gap-2 p-2 overflow-hidden">
         {items.map((item, index) => (
           <img

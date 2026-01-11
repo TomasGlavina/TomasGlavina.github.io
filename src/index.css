@@ -69,7 +69,7 @@
 :root {
   font-family: "Inconsolata", "IBM Plex Mono", "Courier New", monospace;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 500;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -84,14 +84,13 @@ h2 {
 
 @layer components {
   .content {
-    @apply py-3 px-4 flex-1 min-h-0 overflow-auto;
+    @apply p-1 flex-1 min-h-0 overflow-auto;
   }
   .skill-text {
     @apply text-xl font-semibold text-ctp-green;
   }
   .tile {
-    @apply h-full rounded-md border-2 border-ctp-overlay0 bg-ctp-base flex flex-col overflow-hidden;
-    box-shadow: 4px 4px 0px 0px #3c3836;
+    @apply h-full rounded-[2px] border-2 border-ctp-overlay0 bg-ctp-base/95 flex flex-col overflow-hidden;
   }
 }
 
@@ -100,9 +99,14 @@ h2 {
     @apply border-border;
   }
   body {
-    @apply bg-ctp-mantle text-ctp-text;
+    @apply bg-ctp-mantle text-ctp-text font-medium lowercase;
+    background-image: url("/wallpaper.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
   h1 {
-    @apply text-xl md:text-2xl font-bold mb-4 tracking-tight;
+    @apply text-xl md:text-2xl font-semibold mb-4 tracking-tight;
   }
 }

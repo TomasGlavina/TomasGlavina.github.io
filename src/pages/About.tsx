@@ -5,7 +5,7 @@ const About = ({ onClose }: { onClose: () => void }) => {
   return (
     <section id="about" className=" m-0 scroll-mt-24">
       <SectionTitleClose emoji="(˶˃ ᵕ ˂˶)" onClose={onClose}>
-        About me
+        cat about
       </SectionTitleClose>
       <div className="flex justify-center overflow-hidden items-center ">
         <div className="flex flex-col space-y-6 max-w-4xl p-4">
