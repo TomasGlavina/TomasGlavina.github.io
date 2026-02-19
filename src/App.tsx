@@ -2,7 +2,7 @@
 import "./index.css";
 
 import Skills from "./pages/Skills.tsx";
-import Home from "./pages/Home";
+import AboutMeTile from "./pages/Home";
 import Projects, { ProjectsModal } from "./pages/Projects";
 import About from "./pages/About";
 import Contact, { ContactModal } from "./pages/Contact";
@@ -38,16 +38,16 @@ function HomePage() {
   }
 
   return (
-    <div className="min-h-screen my-12 mx-20 w-full text-ctp-text">
-      <main className="mt-9 h-[calc(100vh-2.25rem)] w-full">
-        <div className="grid h-full items-stretch gap-1 grid-cols-1 lg:grid-cols-10 lg:auto-rows-[5rem] lg:grid-flow-dense">
+    <div className="h-dvh w-full p-[8px] pt-[calc(2.25rem+8px)] text-ctp-text">
+      <main className="h-full w-full">
+        <div className="grid h-full items-stretch gap-[8px] grid-cols-1 lg:grid-cols-9 lg:grid-rows-[repeat(11,minmax(0,1fr))] lg:grid-flow-dense">
           <div className="col-span-1 lg:col-span-4 lg:row-span-3">
             <Neofetch />
             
           </div>
 
           <div className="col-span-1 lg:col-span-5 lg:row-span-3">
-            <Home onOpenAbout={() => setActiveModal("about")} />
+            <AboutMeTile onOpenAbout={() => setActiveModal("about")} />
           </div>
 
           <div className="col-span-1 lg:col-span-4 lg:row-span-4">
@@ -72,12 +72,12 @@ function HomePage() {
           
           {activeModal && (
             <div
-              className="fixed inset-0 z-50 flex items-center justify-center bg-ctp-crust/80 p-4"
+              className="fixed inset-0 z-50 flex items-center justify-center bg-ctp-crust/80 p-4 animate-in fade-in duration-150"
               onClick={(e) => {
                 if (e.target === e.currentTarget) closeModal();
               }}
             >
-              <div className="relative w-full max-w-4xl">
+              <div className="relative w-full max-w-4xl animate-in fade-in zoom-in-95 slide-in-from-top-2 duration-200">
                 {/* Window with persistent border that scrolls inside */}
                 <div className="rounded-[4px] border border-ctp-overlay0 bg-ctp-mantle overflow-hidden">
                   {/* This is the scroll area; the border stays visible while content scrolls */}

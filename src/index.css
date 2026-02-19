@@ -9,7 +9,7 @@
     height: 100%;
   }
   body {
-    @apply text-[16px] md:text-[17px];
+    @apply text-base;
   } /* global scale */
   :root {
     --background: 0 0% 16%;
@@ -67,6 +67,7 @@
 }
 
 :root {
+  --ui-font-size: clamp(16px, calc(13px + 0.2778vh), 19px);
   font-family: "Inconsolata", "IBM Plex Mono", "Courier New", monospace;
   line-height: 1.5;
   font-weight: 500;
@@ -75,6 +76,16 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@supports (height: 100dvh) {
+  :root {
+    --ui-font-size: clamp(16px, calc(13px + 0.2778dvh), 19px);
+  }
+}
+
+html {
+  font-size: var(--ui-font-size);
 }
 
 h1,

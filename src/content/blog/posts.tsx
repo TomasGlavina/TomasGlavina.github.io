@@ -6,6 +6,15 @@ import GoNotes, { frontmatter as goFrontmatter } from "./2025-10-05-go-notes.mdx
 import LinuxHabits, {
   frontmatter as linuxFrontmatter,
 } from "./2025-10-08-linux-habits.mdx";
+import DevOpsProject, {
+  frontmatter as devopsProjectFrontmatter,
+} from "../projects/README-devops.mdx";
+import DronoraProject, {
+  frontmatter as dronoraProjectFrontmatter,
+} from "../projects/README-dronora.mdx";
+import DotfilesProject, {
+  frontmatter as dotfilesProjectFrontmatter,
+} from "../projects/README-dotfiles.mdx";
 
 export type BlogPost = {
   slug: string;
@@ -39,4 +48,11 @@ export const posts: BlogPost[] = [
   buildPost("hello-world", HelloWorld, helloFrontmatter),
   buildPost("go-notes", GoNotes, goFrontmatter),
   buildPost("linux-habits", LinuxHabits, linuxFrontmatter),
+  buildPost("project-devops-todo-app", DevOpsProject, devopsProjectFrontmatter),
+  buildPost(
+    "project-dronora-architecture",
+    DronoraProject,
+    dronoraProjectFrontmatter
+  ),
+  buildPost("project-linux-dotfiles", DotfilesProject, dotfilesProjectFrontmatter),
 ].sort((a, b) => b.date.localeCompare(a.date));

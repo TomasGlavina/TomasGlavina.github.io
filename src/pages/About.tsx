@@ -10,7 +10,7 @@ const About = ({ onClose }: { onClose: () => void }) => {
       <div className="flex justify-center overflow-hidden items-center ">
         <div className="flex flex-col space-y-6 max-w-4xl p-4">
           <div className="flex flex-col md:flex-row md:items-start space-y-4 md:space-y-0 md:space-x-6">
-            <div className="text-center md:text-left md:pl-4 text-[17px] md:text-[18px] leading-relaxed">
+            <div className="text-center md:text-left md:pl-4 text-[1.0625rem] md:text-[1.125rem] leading-relaxed">
               <p>
                 Hello! I am Tomas Glavina and I enjoy solving problems and
                 creating things that live in 0s and 1s. Currently, I am

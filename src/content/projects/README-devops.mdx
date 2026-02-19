@@ -1,0 +1,109 @@
+---
+title: "todo app (devops course project)"
+date: "2026-02-18"
+tags:
+  - project
+  - devops
+  - cicd
+---
+
+# Todo App (DevOps Course Project)
+
+[GitHub Repository](https://github.com/TomasGlavina/todo-app)
+
+This repository contains a small full-stack Todo application built as part of a DevOps-focused university course.
+
+The app itself is intentionally simple (React + Express + MongoDB). The real objective of the course was to practice DevOps as a delivery system, not just coding features.
+
+For this project, DevOps meant treating development as one continuous loop:
+plan -> implement -> validate -> package -> deploy -> observe -> improve.
+
+What we learned and applied:
+
+- Sprint planning and team ceremonies:
+  We translated ideas into short, testable increments and reviewed progress continuously, which reduced scope drift and made priorities explicit.
+- Jira ticketing and workflow management:
+  Work was broken into trackable tasks with ownership and status, creating transparency and better handoffs between teammates.
+- Git/GitLab collaboration:
+  Branch-based development and merge workflows helped isolate changes, reduce integration risk, and keep a clear history of decisions.
+- GitLab CI/CD pipelines:
+  Automated test/build/deploy stages provided fast feedback and consistent quality gates before changes reached main/deployment.
+- Docker image/container workflows:
+  Containerized services minimized "works on my machine" issues and standardized how the app ran in local and server environments.
+- Automated deployment with Compose:
+  Deployment became a repeatable process driven by versioned config and images, reducing manual server steps and release errors.
+
+In short, this repository demonstrates a DevOps mindset where code, process, automation, and collaboration are equally important to delivering reliable software.
+
+## Project Structure
+
+- `frontend/` - React client
+- `backend/` - Express API + MongoDB integration
+- `.gitlab-ci.yml` - CI/CD pipeline (test, build, deploy)
+- `docker-compose.yml` - local development containers
+- `docker-compose.server.yml` - deployment compose template used by CI
+
+## Tech Stack
+
+- Frontend: React (Create React App)
+- Backend: Express.js, Mongoose
+- Database: MongoDB Atlas
+- CI/CD: GitLab CI
+- Containerization: Docker, Docker Compose
+
+## Local Development
+
+### Option 1: Run with Docker Compose
+
+From repository root:
+
+```bash
+docker compose up --build
+```
+
+Services:
+
+- Frontend: `http://localhost:3000`
+- Backend: `http://localhost:5000`
+
+### Option 2: Run Services Manually
+
+Start backend:
+
+```bash
+cd backend
+npm install
+MONGO_USR=<username> MONGO_PASS=<password> npm run dev
+```
+
+Start frontend (new terminal):
+
+```bash
+cd frontend
+npm install
+npm start
+```
+
+## CI/CD Overview
+
+Pipeline stages in `.gitlab-ci.yml`:
+
+1. `test`: runs backend lint/tests and frontend tests
+2. `build`: builds Docker images (pushes images on `main`)
+3. `deploy`: transfers compose/env files to remote host and updates services
+
+Branch behavior:
+
+- Non-`main` branches: test + build validation
+- `main` branch: test + image push + deployment
+
+## Notes
+
+- This is a learning project, not a production-ready system.
+- Frontend API URLs are currently hardcoded to `http://localhost:5000`.
+- Backend requires MongoDB credentials via environment variables.
+
+## Service Docs
+
+- Backend details: `backend/README.md`
+- Frontend details: `frontend/README.md`

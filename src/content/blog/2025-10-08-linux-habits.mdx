@@ -2,13 +2,17 @@
 title: linux habits that compound
 author: Tomas Glavina
 date: 2025-10-08
-tags: [linux]
+tags: [linux, productivity]
 draft: false
 ---
 
 # Linux Habits That Compound
 
-Most of my Linux wins are boring: tiny habits repeated daily.
+Most of my Linux wins are not from magic scripts or perfect dotfiles. They come
+from small habits repeated consistently.
+
+Each habit saves only a few seconds or avoids one mistake. Over months, that
+adds up to faster debugging, cleaner environments, and less operational stress.
 
 ## The shortlist
 
@@ -19,5 +23,108 @@ Most of my Linux wins are boring: tiny habits repeated daily.
 
 ## The result
 
-The system starts to feel predictable. When something breaks, the fixes are
-shorter and the lessons stick.
+The system becomes predictable. When something fails, the fix is usually shorter
+because your environment is observable and reproducible.
+
+## Habit 1: Treat dotfiles as code
+
+Your shell, editor, terminal, and window manager are part of your engineering
+surface area. Version them like code.
+
+Practical baseline:
+
+- one repository for all personal config
+- clear folders per tool (`bash`, `nvim`, `tmux`, `waybar`, `hypr`, etc.)
+- one bootstrap script for new machines
+- README with distro-specific setup notes
+
+This turns "new machine setup" from a weekend project into a 20-minute task.
+
+## Habit 2: Optimize command history
+
+Shell history is a searchable memory of what actually worked.
+
+Useful defaults:
+
+- increase `HISTSIZE` and `HISTFILESIZE`
+- enable timestamped history
+- ignore duplicate spam
+- bind fast history search shortcuts
+
+When an incident happens, you can reconstruct actions quickly instead of
+guessing.
+
+## Habit 3: Standardize your top commands
+
+I keep aliases and shell functions for my most common operations:
+
+```bash
+alias gs='git status -sb'
+alias gl='git log --oneline --decorate --graph -20'
+alias v='nvim'
+alias dc='docker compose'
+```
+
+The goal is not cleverness. The goal is less typing variance and fewer command
+mistakes during context switching.
+
+## Habit 4: Build a log-first debugging reflex
+
+Before touching code, inspect the runtime facts:
+
+```bash
+journalctl -u my-service -n 200 --no-pager
+systemctl status my-service
+ss -tulpn
+```
+
+This habit catches common failures fast:
+
+- process never started
+- wrong environment variable
+- port conflict
+- permissions issue
+- dependency service unavailable
+
+Most "application bugs" are environment or runtime issues first.
+
+## Habit 5: Keep package and service hygiene
+
+Monthly maintenance is enough for most personal environments:
+
+- remove unused packages
+- review enabled services
+- verify disk and inode usage
+- refresh key tooling versions intentionally
+
+Linux feels faster and simpler when you continuously remove drift.
+
+## Habit 6: Automate repetitive setup tasks
+
+Anything repeated more than twice should become a script:
+
+- local bootstrap scripts
+- project setup wrappers
+- backup and restore helpers
+- quick health checks
+
+Even tiny automation reduces decision fatigue and prevents skipped steps.
+
+## A weekly maintenance loop
+
+My low-effort loop:
+
+1. Update dotfiles after any useful tweak.
+2. Remove one outdated alias or script.
+3. Learn one new flag from a command I use often.
+4. Write a short note about one debugging lesson.
+
+This takes less than 30 minutes and keeps skills moving forward.
+
+## Closing thought
+
+Linux rewards consistency. You do not need a perfect setup; you need a reliable
+one that evolves with your real workflow.
+
+Small habits feel boring in the moment. Their compound effect is where the real
+performance gain comes from.

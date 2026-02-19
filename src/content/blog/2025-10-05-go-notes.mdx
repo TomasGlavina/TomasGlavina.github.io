@@ -2,25 +2,156 @@
 title: go notes from small tools
 author: Tomas Glavina
 date: 2025-10-05
-tags: [programming]
+tags: [programming, go]
 draft: false
 ---
 
 # Go Notes From Small Tools
 
-I keep a tiny Go repo with one file per tool. The rule is simple: solve one
-annoying task, ship it, and move on. The payoff is huge because the tools stick
-around for years.
+These are study notes from learning Go while building small utilities. I am
+writing them as if I had to explain the topics to someone else, because that is
+the best way for me to retain them.
 
-## What I like about Go for utilities
+## 1. What clicked first: Go optimizes for clarity
 
-- single binary deployments
-- fast startup time
-- strong standard library
-- simple cross-compilation
+Go feels strict at first, but that strictness removes ambiguity:
 
-## The habit
+- one obvious way to format code (`gofmt`)
+- explicit error handling instead of hidden exceptions
+- small language surface area compared to many ecosystems
 
-I write down the next command I wish existed, then I build the smallest CLI
-that makes it real. The next time I reach for it, I do not have to reinvent the
-pipeline again.
+Main takeaway: less "style debate," more implementation.
+
+## 2. Values vs pointers (the part that finally made sense)
+
+What I learned:
+
+- Go passes arguments by value.
+- You still can share state by passing pointers.
+- Use value receivers for immutable-ish behavior.
+- Use pointer receivers when mutating or avoiding large copies.
+
+Quick example:
+
+```go
+type Counter struct {
+    Value int
+}
+
+func (c Counter) Read() int { // value receiver
+    return c.Value
+}
+
+func (c *Counter) Inc() { // pointer receiver
+    c.Value++
+}
+```
+
+Main takeaway: default to value semantics, switch to pointers intentionally.
+
+## 3. Interfaces are about behavior, not inheritance
+
+What helped me most:
+
+- define interfaces where they are consumed, not where concrete types are built
+- keep interfaces small (often one method is enough)
+- avoid creating interfaces "just in case"
+
+Small interface example:
+
+```go
+type Clock interface {
+    Now() time.Time
+}
+```
+
+Main takeaway: interfaces are for decoupling behavior and enabling tests.
+
+## 4. Error handling: wrap with context, always
+
+I used to return raw errors too often. That made debugging painful.
+
+Better pattern:
+
+```go
+if err := loadConfig(path); err != nil {
+    return fmt.Errorf("load config %s: %w", path, err)
+}
+```
+
+Then callers can use `errors.Is` / `errors.As` while still seeing readable
+context.
+
+Main takeaway: error chains are most useful when every layer adds meaning.
+
+## 5. Concurrency: goroutines are easy, coordination is the hard part
+
+Key lesson: "can run concurrently" does not mean "should run concurrently."
+
+When using goroutines, I now always think about:
+
+- cancellation (`context.Context`)
+- timeout boundaries
+- who owns channel close
+- backpressure (what happens when consumers are slower)
+
+Simple pattern I revisit:
+
+```go
+ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
+defer cancel()
+```
+
+Main takeaway: add cancellation first, then parallelism.
+
+## 6. Testing notes I keep forgetting (and relearning)
+
+- table-driven tests reduce copy-paste and reveal missing cases
+- test the behavior, not private implementation details
+- keep test fixtures small and explicit
+- use subtests (`t.Run`) for readability
+
+Example skeleton:
+
+```go
+func TestParse(t *testing.T) {
+    tests := []struct{
+        name string
+        in string
+        want string
+    }{
+        {"basic", "a=b", "a"},
+    }
+
+    for _, tc := range tests {
+        t.Run(tc.name, func(t *testing.T) {
+            got := Parse(tc.in)
+            if got != tc.want {
+                t.Fatalf("got %q want %q", got, tc.want)
+            }
+        })
+    }
+}
+```
+
+Main takeaway: good tests are readable documentation for future you.
+
+## 7. Package design notes
+
+Current heuristics I use while studying:
+
+- keep `main` tiny, push logic into internal packages
+- avoid deep folder hierarchies too early
+- group by feature behavior, not by technical layer alone
+- name packages by domain meaning, not generic names like `utils`
+
+Main takeaway: package names should explain intent in one glance.
+
+## What I am revising next
+
+- channels and worker pools in more depth
+- `context` propagation across HTTP boundaries
+- benchmarking with `go test -bench`
+- profiling with `pprof`
+
+If you are also learning Go, I hope these notes save you some loops.

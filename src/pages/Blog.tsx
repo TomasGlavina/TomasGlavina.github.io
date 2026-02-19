@@ -5,7 +5,8 @@ import { Link, useNavigate } from "react-router-dom";
 export default function Blog({ onOpen }: { onOpen?: () => void }) {
   const navigate = useNavigate();
   const handleOpen = onOpen ?? (() => navigate("/blog"));
-  const latestPosts = posts.slice(0, 3);
+  const blogPosts = posts.filter((post) => !post.tags.includes("project"));
+  const latestPosts = blogPosts.slice(0, 3);
   const sizeBySlug: Record<string, string> = {
     "hello-world": "1.0k",
     "go-notes": "1.2k",
@@ -54,6 +55,7 @@ export default function Blog({ onOpen }: { onOpen?: () => void }) {
 }
 
 export function BlogModal({ onClose }: { onClose: () => void }) {
+  const blogPosts = posts.filter((post) => !post.tags.includes("project"));
   const sizeBySlug: Record<string, string> = {
     "hello-world": "1.0k",
     "go-notes": "1.2k",
@@ -66,7 +68,7 @@ export function BlogModal({ onClose }: { onClose: () => void }) {
       </SectionTitleClose>
       <div className="content">
         <ul className="space-y-3 text-xs font-mono">
-          {posts.map((post) => (
+          {blogPosts.map((post) => (
             <li
               key={post.slug}
               className="rounded-md border border-ctp-overlay0 bg-ctp-surface0 px-3 py-2"

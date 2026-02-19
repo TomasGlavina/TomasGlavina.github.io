@@ -37,7 +37,7 @@ export default function SectionTitle({
             event.stopPropagation();
             onOpen();
           }}
-          className="text-[11px] font-semibold tracking-wide text-ctp-green hover:text-ctp-text"
+          className="text-[0.6875rem] font-semibold tracking-wide text-ctp-green hover:text-ctp-text"
         >
           {actionLabel}
         </button>
@@ -65,7 +65,7 @@ export function SectionTitleClose({
       <button
         onClick={onClose}
         aria-label="Close"
-        className="text-[11px] font-bold tracking-wide text-ctp-green hover:text-ctp-red"
+        className="text-[0.6875rem] font-bold tracking-wide text-ctp-green hover:text-ctp-red"
       >
         close
       </button>

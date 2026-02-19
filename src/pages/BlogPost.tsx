@@ -51,7 +51,7 @@ export default function BlogPost() {
             {post.tags.map((tag) => (
               <span
                 key={tag}
-                className="rounded-full bg-ctp-surface2 px-2.5 py-1 text-[11px] font-semibold tracking-wide text-ctp-text"
+                className="rounded-full bg-ctp-surface2 px-2.5 py-1 text-[0.6875rem] font-semibold tracking-wide text-ctp-text"
               >
                 {tag}
               </span>
